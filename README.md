@@ -2,8 +2,8 @@
 
 This project seeks to examine Crime and Punishment within the United States.
 
-#Milestone One
+# Milestone #1
 - Generate ideas
 
-#Milestone Two
+# Milestone #2
 - Create a hand-drawn macro and micro summary
