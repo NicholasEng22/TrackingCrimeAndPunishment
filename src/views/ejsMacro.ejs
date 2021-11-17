@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Crime and Punishment Datatable</title>
+  <meta name="author" content="You">
+  <meta name="description" content="Test">
+  <meta content="text/html" http-equiv="Content-type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+
+<body>
+  <header>
+    <h1>MacroSummary Test</h1>
+  </header>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Year</th>
+        <th>Includes_jails</th>
+        <th>Prisoner Count</th>
+        <th>Crime Reporting Change</th>
+        <th>Crimes Estimated</th>
+        <th>State Population</th>
+        <th>Violent Crime Total</th>
+        <th>Murder Manslaughter</th>
+        <th>Rape Revised</th>
+        <th>Aggravated Assault</th>
+        <th>Property Crime Total</th>
+        <th>Burglary</th>
+        <th>Larceny</th>
+        <th>Vehicle Theft</th>
+      </tr>
+      <% for(let i=1; i<data.length; i++){ %>
+      <tr>
+        <td><%= data[i].jurisdiction %></td>
+        <td><%= data[i].includes_jails %></td>
+        <td><%= data[i].year %></td>
+        <td><%= data[i].prisoner_count %></td>
+        <td><%= data[i].crime_reporting_change %></td>
+        <td><%= data[i].crimes_estimated %></td>
+        <td><%= data[i].state_population %></td>
+        <td><%= data[i].violent_crime_total %></td>
+        <td><%= data[i].murder_manslaughter %></td>
+        <td><%= data[i].rape_revised %></td>
+        <td><%= data[i].robbery %></td>
+        <td><%= data[i].agg_assault %></td>
+        <td><%= data[i].property_crime_total %></td>
+        <td><%= data[i].burglary %></td>
+        <td><%= data[i].larceny %></td>
+        <td><%= data[i].vehicle_theft %></td>
+      </tr>
+      <%}%>
+    </table>
+  </section>
+
+</body>
+
+</html>
