@@ -1,7 +1,7 @@
 const fs = require('fs');
 const ejs = require('ejs');
 
-let state_info = fs.readFileSync('../resources/IncarcerationData.json'utf8');
+let state_info = fs.readFileSync('../resources/IncarcerationData.json' "utf8");
 let index_template = fs.readFileSync('views/index.ejs', 'utf8');
 
 let index_html = ejs.render(index_template, {
