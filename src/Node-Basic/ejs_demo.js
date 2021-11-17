@@ -9,4 +9,4 @@ let index_html = ejs.render(index_template, {
   data: JSON.parse(character_info)
 });
 
-fs.writeFileSync('build/index.html', index_html, 'utf8');
+fs.writeFileSync('../index.html', index_html, 'utf8');
