@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Crime and Punishment Datatable</title>
+    <meta name="author" content="You">
+    <meta name="description" content="Test">
+    <meta content="text/html" http-equiv="Content-type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Trinity School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Index</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="alabama.html">Alabma</a>
+              <a class="dropdown-item" href="alaska.html">Alaska</a>
+              <a class="dropdown-item" href="arizona.html">Arizona</a>
+              <a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+              <a class="dropdown-item" href="california.html">California</a>
+              <a class="dropdown-item" href="colorado.html">Colorado</a>
+              <a class="dropdown-item" href="connecticut.html">Connecticut</a>
+              <a class="dropdown-item" href="delaware.html">Delaware</a>
+              <a class="dropdown-item" href="flordia.html">Florida</a>
+              <a class="dropdown-item" href="georgia.html">Georgia</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <h1>Test</h1>
+      <div class="starter-template">
+        <br>
+        <h1>Tracking Crime and Punishment</h1>
+        <p>This is a cool project.</p>
+      </div>
+      <img src="..\resources\UnitedStates.svg" alt="Map of the US">
+    </main>
+    <br>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Year</th>
+        <th>Includes_jails</th>
+        <th>Prisoner Count</th>
+        <th>Crime Reporting Change</th>
+        <th>Crimes Estimated</th>
+        <th>State Population</th>
+        <th>Violent Crime Total</th>
+        <th>Murder Manslaughter</th>
+        <th>Rape Revised</th>
+        <th>Aggravated Assault</th>
+        <th>Property Crime Total</th>
+        <th>Burglary</th>
+        <th>Larceny</th>
+        <th>Vehicle Theft</th>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2001</td>
+        <td>27710</td>
+        <td>False</td>
+        <td>False</td>
+        <td>5306966.0</td>
+        <td>28675.0</td>
+        <td>400.0</td>
+        <td></td>
+        <td>8868.0</td>
+        <td>17889.0</td>
+        <td>293874.0</td>
+        <td>54821.0</td>
+        <td>186850.0</td>
+        <td>52203.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2002</td>
+        <td>29359</td>
+        <td>False</td>
+        <td>False</td>
+        <td>5441125.0</td>
+        <td>30171.0</td>
+        <td>387.0</td>
+        <td></td>
+        <td>8000.0</td>
+        <td>20176.0</td>
+        <td>318296.0</td>
+        <td>59087.0</td>
+        <td>201541.0</td>
+        <td>57668.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2003</td>
+        <td>31084</td>
+        <td>False</td>
+        <td>False</td>
+        <td>5579222.0</td>
+        <td>28638.0</td>
+        <td>441.0</td>
+        <td></td>
+        <td>7619.0</td>
+        <td>18722.0</td>
+        <td>314335.0</td>
+        <td>58613.0</td>
+        <td>198725.0</td>
+        <td>56997.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2004</td>
+        <td>32384</td>
+        <td>False</td>
+        <td>False</td>
+        <td>5739879.0</td>
+        <td>28952.0</td>
+        <td>414.0</td>
+        <td></td>
+        <td>7721.0</td>
+        <td>18921.0</td>
+        <td>291203.0</td>
+        <td>56885.0</td>
+        <td>179012.0</td>
+        <td>55306.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2005</td>
+        <td>33345</td>
+        <td>False</td>
+        <td>False</td>
+        <td>5953007.0</td>
+        <td>30478.0</td>
+        <td>445.0</td>
+        <td></td>
+        <td>8579.0</td>
+        <td>19448.0</td>
+        <td>287345.0</td>
+        <td>56328.0</td>
+        <td>176112.0</td>
+        <td>54905.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2006</td>
+        <td>35752</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6166318.0</td>
+        <td>33456.0</td>
+        <td>533.0</td>
+        <td></td>
+        <td>9491.0</td>
+        <td>20983.0</td>
+        <td>294389.0</td>
+        <td>59418.0</td>
+        <td>178321.0</td>
+        <td>56650.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2007</td>
+        <td>37700</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6338755.0</td>
+        <td>32835.0</td>
+        <td>548.0</td>
+        <td></td>
+        <td>9764.0</td>
+        <td>20170.0</td>
+        <td>287308.0</td>
+        <td>59988.0</td>
+        <td>177076.0</td>
+        <td>50244.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2008</td>
+        <td>39455</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6500180.0</td>
+        <td>31567.0</td>
+        <td>462.0</td>
+        <td></td>
+        <td>9809.0</td>
+        <td>19096.0</td>
+        <td>266653.0</td>
+        <td>58606.0</td>
+        <td>169460.0</td>
+        <td>38587.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2009</td>
+        <td>40544</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6595778.0</td>
+        <td>28128.0</td>
+        <td>380.0</td>
+        <td></td>
+        <td>8199.0</td>
+        <td>17270.0</td>
+        <td>236721.0</td>
+        <td>54308.0</td>
+        <td>155976.0</td>
+        <td>26437.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2010</td>
+        <td>40130</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6413158.0</td>
+        <td>26528.0</td>
+        <td>408.0</td>
+        <td></td>
+        <td>6953.0</td>
+        <td>16976.0</td>
+        <td>226802.0</td>
+        <td>50932.0</td>
+        <td>154137.0</td>
+        <td>21733.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2011</td>
+        <td>39949</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6467315.0</td>
+        <td>26789.0</td>
+        <td>397.0</td>
+        <td></td>
+        <td>7145.0</td>
+        <td>16748.0</td>
+        <td>229896.0</td>
+        <td>54695.0</td>
+        <td>155400.0</td>
+        <td>19801.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2012</td>
+        <td>40013</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6551149.0</td>
+        <td>28077.0</td>
+        <td>358.0</td>
+        <td></td>
+        <td>7383.0</td>
+        <td>18054.0</td>
+        <td>231701.0</td>
+        <td>52911.0</td>
+        <td>159808.0</td>
+        <td>18982.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2013</td>
+        <td>41031</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6634997.0</td>
+        <td>27576.0</td>
+        <td>355.0</td>
+        <td>3174.0</td>
+        <td>6656.0</td>
+        <td>17391.0</td>
+        <td>223294.0</td>
+        <td>48292.0</td>
+        <td>158036.0</td>
+        <td>16966.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2014</td>
+        <td>42136</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6731484.0</td>
+        <td>26916.0</td>
+        <td>319.0</td>
+        <td>3378.0</td>
+        <td>6249.0</td>
+        <td>16970.0</td>
+        <td>215240.0</td>
+        <td>43562.0</td>
+        <td>154091.0</td>
+        <td>17587.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2015</td>
+        <td>42204</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6828065.0</td>
+        <td>28012.0</td>
+        <td>309.0</td>
+        <td>3108.0</td>
+        <td>6360.0</td>
+        <td>18235.0</td>
+        <td>207107.0</td>
+        <td>37957.0</td>
+        <td>152365.0</td>
+        <td>16785.0</td>
+      </tr>
+      
+      <tr>
+        <td>ARIZONA</td>
+        <td>False</td>
+        <td>2016</td>
+        <td>42248</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6908642.0</td>
+        <td>32542.0</td>
+        <td>389.0</td>
+        <td>3304.0</td>
+        <td>7045.0</td>
+        <td>21804.0</td>
+        <td>207317.0</td>
+        <td>38216.0</td>
+        <td>150618.0</td>
+        <td>18483.0</td>
+      </tr>
+      
+    </table>
+  </section>
+
+</body>
+
+</html>

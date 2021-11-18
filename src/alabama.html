@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Crime and Punishment Datatable</title>
+    <meta name="author" content="You">
+    <meta name="description" content="Test">
+    <meta content="text/html" http-equiv="Content-type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Trinity School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Index</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="alabama.html">Alabma</a>
+              <a class="dropdown-item" href="alaska.html">Alaska</a>
+              <a class="dropdown-item" href="arizona.html">Arizona</a>
+              <a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+              <a class="dropdown-item" href="california.html">California</a>
+              <a class="dropdown-item" href="colorado.html">Colorado</a>
+              <a class="dropdown-item" href="connecticut.html">Connecticut</a>
+              <a class="dropdown-item" href="delaware.html">Delaware</a>
+              <a class="dropdown-item" href="flordia.html">Florida</a>
+              <a class="dropdown-item" href="georgia.html">Georgia</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <h1>Test</h1>
+      <div class="starter-template">
+        <br>
+        <h1>Tracking Crime and Punishment</h1>
+        <p>This is a cool project.</p>
+      </div>
+      <img src="..\resources\UnitedStates.svg" alt="Map of the US">
+    </main>
+    <br>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Year</th>
+        <th>Includes_jails</th>
+        <th>Prisoner Count</th>
+        <th>Crime Reporting Change</th>
+        <th>Crimes Estimated</th>
+        <th>State Population</th>
+        <th>Violent Crime Total</th>
+        <th>Murder Manslaughter</th>
+        <th>Rape Revised</th>
+        <th>Aggravated Assault</th>
+        <th>Property Crime Total</th>
+        <th>Burglary</th>
+        <th>Larceny</th>
+        <th>Vehicle Theft</th>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2001</td>
+        <td>24741</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4468912.0</td>
+        <td>19582.0</td>
+        <td>379.0</td>
+        <td></td>
+        <td>5584.0</td>
+        <td>12250.0</td>
+        <td>173253.0</td>
+        <td>40642.0</td>
+        <td>119992.0</td>
+        <td>12619.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2002</td>
+        <td>25100</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4478896.0</td>
+        <td>19931.0</td>
+        <td>303.0</td>
+        <td></td>
+        <td>5962.0</td>
+        <td>12002.0</td>
+        <td>180400.0</td>
+        <td>42578.0</td>
+        <td>123932.0</td>
+        <td>13890.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2003</td>
+        <td>27614</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4503726.0</td>
+        <td>19331.0</td>
+        <td>299.0</td>
+        <td></td>
+        <td>6038.0</td>
+        <td>11338.0</td>
+        <td>182241.0</td>
+        <td>43245.0</td>
+        <td>124039.0</td>
+        <td>14957.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2004</td>
+        <td>25635</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4525375.0</td>
+        <td>19324.0</td>
+        <td>254.0</td>
+        <td></td>
+        <td>6042.0</td>
+        <td>11286.0</td>
+        <td>182340.0</td>
+        <td>44666.0</td>
+        <td>123650.0</td>
+        <td>14024.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2005</td>
+        <td>24315</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4548327.0</td>
+        <td>19678.0</td>
+        <td>374.0</td>
+        <td></td>
+        <td>6447.0</td>
+        <td>11293.0</td>
+        <td>177393.0</td>
+        <td>43473.0</td>
+        <td>120780.0</td>
+        <td>13140.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2006</td>
+        <td>24103</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4599030.0</td>
+        <td>19553.0</td>
+        <td>382.0</td>
+        <td></td>
+        <td>7062.0</td>
+        <td>10463.0</td>
+        <td>181249.0</td>
+        <td>44780.0</td>
+        <td>121451.0</td>
+        <td>15018.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2007</td>
+        <td>25253</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4627851.0</td>
+        <td>20775.0</td>
+        <td>412.0</td>
+        <td></td>
+        <td>7398.0</td>
+        <td>11417.0</td>
+        <td>184082.0</td>
+        <td>45379.0</td>
+        <td>124465.0</td>
+        <td>14238.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2008</td>
+        <td>25363</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4661900.0</td>
+        <td>21110.0</td>
+        <td>351.0</td>
+        <td></td>
+        <td>7346.0</td>
+        <td>11795.0</td>
+        <td>190416.0</td>
+        <td>50411.0</td>
+        <td>126539.0</td>
+        <td>13466.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2009</td>
+        <td>27241</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4708708.0</td>
+        <td>21194.0</td>
+        <td>322.0</td>
+        <td></td>
+        <td>6265.0</td>
+        <td>13103.0</td>
+        <td>178007.0</td>
+        <td>48844.0</td>
+        <td>118072.0</td>
+        <td>11091.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2010</td>
+        <td>27345</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4785401.0</td>
+        <td>18363.0</td>
+        <td>275.0</td>
+        <td></td>
+        <td>4864.0</td>
+        <td>11869.0</td>
+        <td>168828.0</td>
+        <td>42484.0</td>
+        <td>115564.0</td>
+        <td>10780.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2011</td>
+        <td>26813</td>
+        <td>True</td>
+        <td>False</td>
+        <td>4803689.0</td>
+        <td>20166.0</td>
+        <td>299.0</td>
+        <td></td>
+        <td>4906.0</td>
+        <td>13591.0</td>
+        <td>173192.0</td>
+        <td>51119.0</td>
+        <td>111411.0</td>
+        <td>10662.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2012</td>
+        <td>26768</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4817528.0</td>
+        <td>21693.0</td>
+        <td>342.0</td>
+        <td></td>
+        <td>5020.0</td>
+        <td>15035.0</td>
+        <td>168878.0</td>
+        <td>47481.0</td>
+        <td>111523.0</td>
+        <td>9874.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2013</td>
+        <td>26825</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4833996.0</td>
+        <td>20834.0</td>
+        <td>346.0</td>
+        <td>2055.0</td>
+        <td>4645.0</td>
+        <td>13788.0</td>
+        <td>161835.0</td>
+        <td>42410.0</td>
+        <td>108862.0</td>
+        <td>10563.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2014</td>
+        <td>26145</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4849377.0</td>
+        <td>20727.0</td>
+        <td>276.0</td>
+        <td>2005.0</td>
+        <td>4701.0</td>
+        <td>13745.0</td>
+        <td>154094.0</td>
+        <td>39715.0</td>
+        <td>104238.0</td>
+        <td>10141.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2015</td>
+        <td>25212</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4858979.0</td>
+        <td>22952.0</td>
+        <td>348.0</td>
+        <td>2039.0</td>
+        <td>4611.0</td>
+        <td>15954.0</td>
+        <td>144746.0</td>
+        <td>35255.0</td>
+        <td>99156.0</td>
+        <td>10335.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALABAMA</td>
+        <td>False</td>
+        <td>2016</td>
+        <td>23745</td>
+        <td>False</td>
+        <td>False</td>
+        <td>4860545.0</td>
+        <td>25878.0</td>
+        <td>407.0</td>
+        <td>1915.0</td>
+        <td>4687.0</td>
+        <td>18869.0</td>
+        <td>143259.0</td>
+        <td>34045.0</td>
+        <td>97498.0</td>
+        <td>11716.0</td>
+      </tr>
+      
+    </table>
+  </section>
+
+</body>
+
+</html>

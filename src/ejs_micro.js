@@ -6,18 +6,25 @@ let index_template = fs.readFileSync('views/ejsMicro.ejs', 'utf8');
 
 let stateJSON = JSON.parse(state_info);
 
-let microSummaryTable = [];
 
-stateJSON.forEach(function(state) {
-  if ((state["jurisdiction"] == "jurisdiction") || state["jurisdiction"] == "ALABAMA") {
-    microSummaryTable.push(state);
-  }
-});
+let stateArray = ["ALABAMA", "ALASKA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "FLORIDA", "GEORGIA"];
 
 
-let index_html = ejs.render(index_template, {
-  filename: __dirname + '/views/ejsMicro.ejs',
-  data: microSummaryTable
-});
+for (let i = 0; i < 10; i++) {
+  let microSummaryTable = [];
 
-fs.writeFileSync('ejsMicro.html', index_html, 'utf8');
+  stateJSON.forEach(function(state) {
+    if ((state["jurisdiction"] == "jurisdiction") || (state["jurisdiction"] == stateArray[i])) {
+      microSummaryTable.push(state);
+    }
+  });
+
+  let stateName = stateArray[i].toLowerCase();
+
+  let index_html = ejs.render(index_template, {
+    filename: __dirname + '/views/ejsMicro.ejs',
+    data: microSummaryTable
+  });
+
+  fs.writeFileSync((stateName + ".html"), index_html, 'utf8');
+}

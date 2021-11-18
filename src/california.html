@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Crime and Punishment Datatable</title>
+    <meta name="author" content="You">
+    <meta name="description" content="Test">
+    <meta content="text/html" http-equiv="Content-type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Trinity School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Index</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="alabama.html">Alabma</a>
+              <a class="dropdown-item" href="alaska.html">Alaska</a>
+              <a class="dropdown-item" href="arizona.html">Arizona</a>
+              <a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+              <a class="dropdown-item" href="california.html">California</a>
+              <a class="dropdown-item" href="colorado.html">Colorado</a>
+              <a class="dropdown-item" href="connecticut.html">Connecticut</a>
+              <a class="dropdown-item" href="delaware.html">Delaware</a>
+              <a class="dropdown-item" href="flordia.html">Florida</a>
+              <a class="dropdown-item" href="georgia.html">Georgia</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <h1>Test</h1>
+      <div class="starter-template">
+        <br>
+        <h1>Tracking Crime and Punishment</h1>
+        <p>This is a cool project.</p>
+      </div>
+      <img src="..\resources\UnitedStates.svg" alt="Map of the US">
+    </main>
+    <br>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Year</th>
+        <th>Includes_jails</th>
+        <th>Prisoner Count</th>
+        <th>Crime Reporting Change</th>
+        <th>Crimes Estimated</th>
+        <th>State Population</th>
+        <th>Violent Crime Total</th>
+        <th>Murder Manslaughter</th>
+        <th>Rape Revised</th>
+        <th>Aggravated Assault</th>
+        <th>Property Crime Total</th>
+        <th>Burglary</th>
+        <th>Larceny</th>
+        <th>Vehicle Theft</th>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2001</td>
+        <td>157142</td>
+        <td>False</td>
+        <td>False</td>
+        <td>34600463.0</td>
+        <td>212867.0</td>
+        <td>2206.0</td>
+        <td></td>
+        <td>64614.0</td>
+        <td>136087.0</td>
+        <td>1134189.0</td>
+        <td>232273.0</td>
+        <td>697739.0</td>
+        <td>204177.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2002</td>
+        <td>159695</td>
+        <td>False</td>
+        <td>False</td>
+        <td>35001986.0</td>
+        <td>208388.0</td>
+        <td>2395.0</td>
+        <td></td>
+        <td>64968.0</td>
+        <td>130827.0</td>
+        <td>1176484.0</td>
+        <td>238428.0</td>
+        <td>715692.0</td>
+        <td>222364.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2003</td>
+        <td>161785</td>
+        <td>False</td>
+        <td>False</td>
+        <td>35462712.0</td>
+        <td>205551.0</td>
+        <td>2407.0</td>
+        <td></td>
+        <td>63770.0</td>
+        <td>129380.0</td>
+        <td>1215086.0</td>
+        <td>242274.0</td>
+        <td>731486.0</td>
+        <td>241326.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2004</td>
+        <td>163939</td>
+        <td>False</td>
+        <td>False</td>
+        <td>35842038.0</td>
+        <td>189175.0</td>
+        <td>2392.0</td>
+        <td></td>
+        <td>61768.0</td>
+        <td>115400.0</td>
+        <td>1227194.0</td>
+        <td>245903.0</td>
+        <td>728687.0</td>
+        <td>252604.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2005</td>
+        <td>168035</td>
+        <td>False</td>
+        <td>False</td>
+        <td>36154147.0</td>
+        <td>190178.0</td>
+        <td>2503.0</td>
+        <td></td>
+        <td>63622.0</td>
+        <td>114661.0</td>
+        <td>1200531.0</td>
+        <td>250521.0</td>
+        <td>692467.0</td>
+        <td>257543.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2006</td>
+        <td>172298</td>
+        <td>False</td>
+        <td>False</td>
+        <td>36457549.0</td>
+        <td>194483.0</td>
+        <td>2486.0</td>
+        <td></td>
+        <td>71142.0</td>
+        <td>111620.0</td>
+        <td>1159988.0</td>
+        <td>247230.0</td>
+        <td>669103.0</td>
+        <td>243655.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2007</td>
+        <td>171444</td>
+        <td>False</td>
+        <td>False</td>
+        <td>36553215.0</td>
+        <td>191561.0</td>
+        <td>2262.0</td>
+        <td></td>
+        <td>70706.0</td>
+        <td>109547.0</td>
+        <td>1112510.0</td>
+        <td>237850.0</td>
+        <td>654526.0</td>
+        <td>220134.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2008</td>
+        <td>171085</td>
+        <td>False</td>
+        <td>False</td>
+        <td>36756666.0</td>
+        <td>185329.0</td>
+        <td>2142.0</td>
+        <td></td>
+        <td>69388.0</td>
+        <td>104896.0</td>
+        <td>1080996.0</td>
+        <td>237811.0</td>
+        <td>650656.0</td>
+        <td>192529.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2009</td>
+        <td>168830</td>
+        <td>False</td>
+        <td>False</td>
+        <td>36961664.0</td>
+        <td>174934.0</td>
+        <td>1972.0</td>
+        <td></td>
+        <td>64093.0</td>
+        <td>100156.0</td>
+        <td>1009433.0</td>
+        <td>230198.0</td>
+        <td>615402.0</td>
+        <td>163833.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2010</td>
+        <td>162821</td>
+        <td>False</td>
+        <td>False</td>
+        <td>37338198.0</td>
+        <td>164133.0</td>
+        <td>1809.0</td>
+        <td></td>
+        <td>58116.0</td>
+        <td>95877.0</td>
+        <td>981939.0</td>
+        <td>228857.0</td>
+        <td>600558.0</td>
+        <td>152524.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2011</td>
+        <td>147578</td>
+        <td>False</td>
+        <td>False</td>
+        <td>37683933.0</td>
+        <td>154943.0</td>
+        <td>1792.0</td>
+        <td></td>
+        <td>54291.0</td>
+        <td>91195.0</td>
+        <td>973822.0</td>
+        <td>230075.0</td>
+        <td>596905.0</td>
+        <td>146842.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2012</td>
+        <td>132935</td>
+        <td>False</td>
+        <td>False</td>
+        <td>37999878.0</td>
+        <td>160944.0</td>
+        <td>1884.0</td>
+        <td></td>
+        <td>56521.0</td>
+        <td>94702.0</td>
+        <td>1049465.0</td>
+        <td>245767.0</td>
+        <td>635090.0</td>
+        <td>168608.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2013</td>
+        <td>134339</td>
+        <td>False</td>
+        <td>False</td>
+        <td>38431393.0</td>
+        <td>154739.0</td>
+        <td>1746.0</td>
+        <td>10324.0</td>
+        <td>53640.0</td>
+        <td>89029.0</td>
+        <td>1018907.0</td>
+        <td>232058.0</td>
+        <td>621557.0</td>
+        <td>165292.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2014</td>
+        <td>134430</td>
+        <td>False</td>
+        <td>False</td>
+        <td>38802500.0</td>
+        <td>153709.0</td>
+        <td>1699.0</td>
+        <td>11527.0</td>
+        <td>48680.0</td>
+        <td>91803.0</td>
+        <td>947192.0</td>
+        <td>202670.0</td>
+        <td>592670.0</td>
+        <td>151852.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2015</td>
+        <td>127815</td>
+        <td>False</td>
+        <td>False</td>
+        <td>39144818.0</td>
+        <td>166883.0</td>
+        <td>1861.0</td>
+        <td>12811.0</td>
+        <td>52862.0</td>
+        <td>99349.0</td>
+        <td>1024914.0</td>
+        <td>197404.0</td>
+        <td>656517.0</td>
+        <td>170993.0</td>
+      </tr>
+      
+      <tr>
+        <td>CALIFORNIA</td>
+        <td>False</td>
+        <td>2016</td>
+        <td>129416</td>
+        <td>False</td>
+        <td>False</td>
+        <td>39296476.0</td>
+        <td>174796.0</td>
+        <td>1930.0</td>
+        <td>13702.0</td>
+        <td>54789.0</td>
+        <td>104375.0</td>
+        <td>1002070.0</td>
+        <td>188304.0</td>
+        <td>637010.0</td>
+        <td>176756.0</td>
+      </tr>
+      
+    </table>
+  </section>
+
+</body>
+
+</html>

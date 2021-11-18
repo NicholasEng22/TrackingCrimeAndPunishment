@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Crime and Punishment Datatable</title>
+    <meta name="author" content="You">
+    <meta name="description" content="Test">
+    <meta content="text/html" http-equiv="Content-type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Trinity School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Index</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="alabama.html">Alabma</a>
+              <a class="dropdown-item" href="alaska.html">Alaska</a>
+              <a class="dropdown-item" href="arizona.html">Arizona</a>
+              <a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+              <a class="dropdown-item" href="california.html">California</a>
+              <a class="dropdown-item" href="colorado.html">Colorado</a>
+              <a class="dropdown-item" href="connecticut.html">Connecticut</a>
+              <a class="dropdown-item" href="delaware.html">Delaware</a>
+              <a class="dropdown-item" href="flordia.html">Florida</a>
+              <a class="dropdown-item" href="georgia.html">Georgia</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <h1>Test</h1>
+      <div class="starter-template">
+        <br>
+        <h1>Tracking Crime and Punishment</h1>
+        <p>This is a cool project.</p>
+      </div>
+      <img src="..\resources\UnitedStates.svg" alt="Map of the US">
+    </main>
+    <br>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Year</th>
+        <th>Includes_jails</th>
+        <th>Prisoner Count</th>
+        <th>Crime Reporting Change</th>
+        <th>Crimes Estimated</th>
+        <th>State Population</th>
+        <th>Violent Crime Total</th>
+        <th>Murder Manslaughter</th>
+        <th>Rape Revised</th>
+        <th>Aggravated Assault</th>
+        <th>Property Crime Total</th>
+        <th>Burglary</th>
+        <th>Larceny</th>
+        <th>Vehicle Theft</th>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2001</td>
+        <td>4570</td>
+        <td>False</td>
+        <td>False</td>
+        <td>633630.0</td>
+        <td>3735.0</td>
+        <td>39.0</td>
+        <td></td>
+        <td>514.0</td>
+        <td>2681.0</td>
+        <td>23160.0</td>
+        <td>3847.0</td>
+        <td>16695.0</td>
+        <td>2618.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2002</td>
+        <td>4351</td>
+        <td>False</td>
+        <td>False</td>
+        <td>641482.0</td>
+        <td>3627.0</td>
+        <td>33.0</td>
+        <td></td>
+        <td>489.0</td>
+        <td>2594.0</td>
+        <td>24118.0</td>
+        <td>3908.0</td>
+        <td>17739.0</td>
+        <td>2471.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2003</td>
+        <td>4472</td>
+        <td>False</td>
+        <td>False</td>
+        <td>648280.0</td>
+        <td>3877.0</td>
+        <td>39.0</td>
+        <td></td>
+        <td>446.0</td>
+        <td>2787.0</td>
+        <td>24386.0</td>
+        <td>3874.0</td>
+        <td>18051.0</td>
+        <td>2461.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2004</td>
+        <td>4534</td>
+        <td>False</td>
+        <td>False</td>
+        <td>657755.0</td>
+        <td>4159.0</td>
+        <td>37.0</td>
+        <td></td>
+        <td>447.0</td>
+        <td>3117.0</td>
+        <td>22172.0</td>
+        <td>3773.0</td>
+        <td>16159.0</td>
+        <td>2240.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2005</td>
+        <td>4798</td>
+        <td>False</td>
+        <td>False</td>
+        <td>663253.0</td>
+        <td>4194.0</td>
+        <td>32.0</td>
+        <td></td>
+        <td>537.0</td>
+        <td>3087.0</td>
+        <td>23975.0</td>
+        <td>4131.0</td>
+        <td>17249.0</td>
+        <td>2595.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2006</td>
+        <td>5052</td>
+        <td>False</td>
+        <td>False</td>
+        <td>670053.0</td>
+        <td>4610.0</td>
+        <td>36.0</td>
+        <td></td>
+        <td>600.0</td>
+        <td>3462.0</td>
+        <td>23975.0</td>
+        <td>4155.0</td>
+        <td>17284.0</td>
+        <td>2536.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2007</td>
+        <td>5151</td>
+        <td>False</td>
+        <td>False</td>
+        <td>683478.0</td>
+        <td>4520.0</td>
+        <td>43.0</td>
+        <td></td>
+        <td>581.0</td>
+        <td>3351.0</td>
+        <td>23096.0</td>
+        <td>3734.0</td>
+        <td>16929.0</td>
+        <td>2433.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2008</td>
+        <td>4997</td>
+        <td>False</td>
+        <td>False</td>
+        <td>686293.0</td>
+        <td>4475.0</td>
+        <td>27.0</td>
+        <td></td>
+        <td>645.0</td>
+        <td>3356.0</td>
+        <td>20090.0</td>
+        <td>3237.0</td>
+        <td>15225.0</td>
+        <td>1628.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2009</td>
+        <td>5472</td>
+        <td>False</td>
+        <td>False</td>
+        <td>698473.0</td>
+        <td>4424.0</td>
+        <td>22.0</td>
+        <td></td>
+        <td>654.0</td>
+        <td>3235.0</td>
+        <td>20538.0</td>
+        <td>3600.0</td>
+        <td>15251.0</td>
+        <td>1687.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2010</td>
+        <td>5369</td>
+        <td>False</td>
+        <td>False</td>
+        <td>714146.0</td>
+        <td>4537.0</td>
+        <td>31.0</td>
+        <td></td>
+        <td>594.0</td>
+        <td>3379.0</td>
+        <td>20259.0</td>
+        <td>3105.0</td>
+        <td>15535.0</td>
+        <td>1619.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2011</td>
+        <td>6216</td>
+        <td>False</td>
+        <td>False</td>
+        <td>723860.0</td>
+        <td>4416.0</td>
+        <td>30.0</td>
+        <td></td>
+        <td>576.0</td>
+        <td>3374.0</td>
+        <td>19094.0</td>
+        <td>2852.0</td>
+        <td>14854.0</td>
+        <td>1388.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2012</td>
+        <td>6308</td>
+        <td>False</td>
+        <td>False</td>
+        <td>730307.0</td>
+        <td>4412.0</td>
+        <td>30.0</td>
+        <td></td>
+        <td>630.0</td>
+        <td>3169.0</td>
+        <td>20037.0</td>
+        <td>2950.0</td>
+        <td>15565.0</td>
+        <td>1522.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2013</td>
+        <td>5081</td>
+        <td>False</td>
+        <td>False</td>
+        <td>737259.0</td>
+        <td>4709.0</td>
+        <td>34.0</td>
+        <td>925.0</td>
+        <td>623.0</td>
+        <td>3127.0</td>
+        <td>21211.0</td>
+        <td>2917.0</td>
+        <td>16599.0</td>
+        <td>1695.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2014</td>
+        <td>6323</td>
+        <td>False</td>
+        <td>False</td>
+        <td>736732.0</td>
+        <td>4684.0</td>
+        <td>41.0</td>
+        <td>771.0</td>
+        <td>629.0</td>
+        <td>3243.0</td>
+        <td>20334.0</td>
+        <td>3150.0</td>
+        <td>15445.0</td>
+        <td>1739.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2015</td>
+        <td>5247</td>
+        <td>False</td>
+        <td>False</td>
+        <td>738432.0</td>
+        <td>5392.0</td>
+        <td>59.0</td>
+        <td>901.0</td>
+        <td>761.0</td>
+        <td>3671.0</td>
+        <td>20806.0</td>
+        <td>3511.0</td>
+        <td>15249.0</td>
+        <td>2046.0</td>
+      </tr>
+      
+      <tr>
+        <td>ALASKA</td>
+        <td>True</td>
+        <td>2016</td>
+        <td>4378</td>
+        <td>False</td>
+        <td>False</td>
+        <td>741522.0</td>
+        <td>5966.0</td>
+        <td>52.0</td>
+        <td>1053.0</td>
+        <td>850.0</td>
+        <td>4011.0</td>
+        <td>24876.0</td>
+        <td>4053.0</td>
+        <td>17766.0</td>
+        <td>3057.0</td>
+      </tr>
+      
+    </table>
+  </section>
+
+</body>
+
+</html>
