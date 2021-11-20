@@ -13,6 +13,11 @@
     <meta name="description" content="Test">
     <meta content="text/html" http-equiv="Content-type" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!-- Load plotly.js into the DOM -->
+  	<script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
+  	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
   </head>
   <body>
     <!-- Optional JavaScript -->
@@ -33,24 +38,24 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../build/about.html">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../build/index.html">Index</a>
+            <a class="nav-link" href="index.html">Index</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="states/alabama.html">Alabma</a>
-              <a class="dropdown-item" href="states/alaska.html">Alaska</a>
-              <a class="dropdown-item" href="states/arizona.html">Arizona</a>
-              <a class="dropdown-item" href="states/arkansas.html">Arkanasa</a>
-              <a class="dropdown-item" href="states/california.html">California</a>
-              <a class="dropdown-item" href="states/colorado.html">Colorado</a>
-              <a class="dropdown-item" href="states/connecticut.html">Connecticut</a>
-              <a class="dropdown-item" href="states/delaware.html">Delaware</a>
-              <a class="dropdown-item" href="states/flordia.html">Florida</a>
-              <a class="dropdown-item" href="states/georgia.html">Georgia</a>
+              <a class="dropdown-item" href="alabama.html">Alabma</a>
+              <a class="dropdown-item" href="alaska.html">Alaska</a>
+              <a class="dropdown-item" href="arizona.html">Arizona</a>
+              <a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+              <a class="dropdown-item" href="california.html">California</a>
+              <a class="dropdown-item" href="colorado.html">Colorado</a>
+              <a class="dropdown-item" href="connecticut.html">Connecticut</a>
+              <a class="dropdown-item" href="delaware.html">Delaware</a>
+              <a class="dropdown-item" href="flordia.html">Florida</a>
+              <a class="dropdown-item" href="georgia.html">Georgia</a>
             </div>
           </li>
         </ul>
@@ -68,7 +73,7 @@
         <h1>Tracking Crime and Punishment</h1>
         <p>This is a cool project.</p>
       </div>
-      <img src="..\resources\UnitedStates.svg" alt="Map of the US">
+      <div id='mapDiv' style="width:1000px;height:600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
     </main>
     <br>
   <section id="charcter-table">
@@ -90,7 +95,7 @@
         <th>Larceny</th>
         <th>Vehicle Theft</th>
       </tr>
-
+      
       <tr>
         <td>FEDERAL</td>
         <td>False</td>
@@ -109,7 +114,7 @@
         <td></td>
         <td></td>
       </tr>
-
+      
       <tr>
         <td>ALABAMA</td>
         <td>False</td>
@@ -128,7 +133,7 @@
         <td>97498.0</td>
         <td>11716.0</td>
       </tr>
-
+      
       <tr>
         <td>ALASKA</td>
         <td>True</td>
@@ -147,7 +152,7 @@
         <td>17766.0</td>
         <td>3057.0</td>
       </tr>
-
+      
       <tr>
         <td>ARIZONA</td>
         <td>False</td>
@@ -166,7 +171,7 @@
         <td>150618.0</td>
         <td>18483.0</td>
       </tr>
-
+      
       <tr>
         <td>ARKANSAS</td>
         <td>False</td>
@@ -185,7 +190,7 @@
         <td>67091.0</td>
         <td>7187.0</td>
       </tr>
-
+      
       <tr>
         <td>CALIFORNIA</td>
         <td>False</td>
@@ -204,7 +209,7 @@
         <td>637010.0</td>
         <td>176756.0</td>
       </tr>
-
+      
       <tr>
         <td>COLORADO</td>
         <td>False</td>
@@ -223,7 +228,7 @@
         <td>108680.0</td>
         <td>19641.0</td>
       </tr>
-
+      
       <tr>
         <td>CONNECTICUT</td>
         <td>True</td>
@@ -242,7 +247,7 @@
         <td>47642.0</td>
         <td>7126.0</td>
       </tr>
-
+      
       <tr>
         <td>DELAWARE</td>
         <td>True</td>
@@ -261,7 +266,7 @@
         <td>19812.0</td>
         <td>1530.0</td>
       </tr>
-
+      
       <tr>
         <td>FLORIDA</td>
         <td>False</td>
@@ -280,7 +285,7 @@
         <td>410352.0</td>
         <td>43135.0</td>
       </tr>
-
+      
       <tr>
         <td>GEORGIA</td>
         <td>False</td>
@@ -299,7 +304,7 @@
         <td>218127.0</td>
         <td>26463.0</td>
       </tr>
-
+      
       <tr>
         <td>HAWAII</td>
         <td>True</td>
@@ -318,7 +323,7 @@
         <td>30871.0</td>
         <td>5499.0</td>
       </tr>
-
+      
       <tr>
         <td>IDAHO</td>
         <td>False</td>
@@ -337,7 +342,7 @@
         <td>20962.0</td>
         <td>2077.0</td>
       </tr>
-
+      
       <tr>
         <td>ILLINOIS</td>
         <td>False</td>
@@ -356,7 +361,7 @@
         <td>195196.0</td>
         <td>19867.0</td>
       </tr>
-
+      
       <tr>
         <td>INDIANA</td>
         <td>False</td>
@@ -375,7 +380,7 @@
         <td>120454.0</td>
         <td>14439.0</td>
       </tr>
-
+      
       <tr>
         <td>IOWA</td>
         <td>False</td>
@@ -394,7 +399,7 @@
         <td>45580.0</td>
         <td>5002.0</td>
       </tr>
-
+      
       <tr>
         <td>KANSAS</td>
         <td>False</td>
@@ -413,7 +418,7 @@
         <td>60119.0</td>
         <td>7415.0</td>
       </tr>
-
+      
       <tr>
         <td>KENTUCKY</td>
         <td>False</td>
@@ -432,7 +437,7 @@
         <td>66833.0</td>
         <td>9948.0</td>
       </tr>
-
+      
       <tr>
         <td>LOUISIANA</td>
         <td>False</td>
@@ -451,7 +456,7 @@
         <td>109492.0</td>
         <td>10330.0</td>
       </tr>
-
+      
       <tr>
         <td>MAINE</td>
         <td>False</td>
@@ -470,7 +475,7 @@
         <td>17131.0</td>
         <td>776.0</td>
       </tr>
-
+      
       <tr>
         <td>MARYLAND</td>
         <td>False</td>
@@ -489,7 +494,7 @@
         <td>100995.0</td>
         <td>13889.0</td>
       </tr>
-
+      
       <tr>
         <td>MASSACHUSETTS</td>
         <td>False</td>
@@ -508,7 +513,7 @@
         <td>79155.0</td>
         <td>8071.0</td>
       </tr>
-
+      
       <tr>
         <td>MICHIGAN</td>
         <td>False</td>
@@ -527,7 +532,7 @@
         <td>130249.0</td>
         <td>20262.0</td>
       </tr>
-
+      
       <tr>
         <td>MINNESOTA</td>
         <td>False</td>
@@ -546,7 +551,7 @@
         <td>90421.0</td>
         <td>8720.0</td>
       </tr>
-
+      
       <tr>
         <td>MISSISSIPPI</td>
         <td>False</td>
@@ -565,7 +570,7 @@
         <td>54725.0</td>
         <td>4307.0</td>
       </tr>
-
+      
       <tr>
         <td>MISSOURI</td>
         <td>False</td>
@@ -584,7 +589,7 @@
         <td>120649.0</td>
         <td>18296.0</td>
       </tr>
-
+      
       <tr>
         <td>MONTANA</td>
         <td>False</td>
@@ -603,7 +608,7 @@
         <td>21427.0</td>
         <td>2763.0</td>
       </tr>
-
+      
       <tr>
         <td>NEBRASKA</td>
         <td>False</td>
@@ -622,7 +627,7 @@
         <td>32009.0</td>
         <td>4729.0</td>
       </tr>
-
+      
       <tr>
         <td>NEVADA</td>
         <td>False</td>
@@ -641,7 +646,7 @@
         <td>43949.0</td>
         <td>13157.0</td>
       </tr>
-
+      
       <tr>
         <td>NEW HAMPSHIRE</td>
         <td>False</td>
@@ -660,7 +665,7 @@
         <td>16454.0</td>
         <td>880.0</td>
       </tr>
-
+      
       <tr>
         <td>NEW JERSEY</td>
         <td>False</td>
@@ -679,7 +684,7 @@
         <td>101459.0</td>
         <td>11324.0</td>
       </tr>
-
+      
       <tr>
         <td>NEW MEXICO</td>
         <td>False</td>
@@ -698,7 +703,7 @@
         <td>52907.0</td>
         <td>11743.0</td>
       </tr>
-
+      
       <tr>
         <td>NEW YORK</td>
         <td>False</td>
@@ -717,7 +722,7 @@
         <td>250990.0</td>
         <td>14384.0</td>
       </tr>
-
+      
       <tr>
         <td>NORTH CAROLINA</td>
         <td>False</td>
@@ -736,7 +741,7 @@
         <td>190377.0</td>
         <td>15306.0</td>
       </tr>
-
+      
       <tr>
         <td>NORTH DAKOTA</td>
         <td>False</td>
@@ -755,7 +760,7 @@
         <td>12249.0</td>
         <td>1954.0</td>
       </tr>
-
+      
       <tr>
         <td>OHIO</td>
         <td>False</td>
@@ -774,7 +779,7 @@
         <td>214102.0</td>
         <td>19762.0</td>
       </tr>
-
+      
       <tr>
         <td>OKLAHOMA</td>
         <td>False</td>
@@ -793,7 +798,7 @@
         <td>76358.0</td>
         <td>12276.0</td>
       </tr>
-
+      
       <tr>
         <td>OREGON</td>
         <td>False</td>
@@ -812,7 +817,7 @@
         <td>91507.0</td>
         <td>13290.0</td>
       </tr>
-
+      
       <tr>
         <td>PENNSYLVANIA</td>
         <td>False</td>
@@ -831,7 +836,7 @@
         <td>174147.0</td>
         <td>13069.0</td>
       </tr>
-
+      
       <tr>
         <td>RHODE ISLAND</td>
         <td>True</td>
@@ -850,7 +855,7 @@
         <td>14157.0</td>
         <td>1103.0</td>
       </tr>
-
+      
       <tr>
         <td>SOUTH CAROLINA</td>
         <td>False</td>
@@ -869,7 +874,7 @@
         <td>114455.0</td>
         <td>13930.0</td>
       </tr>
-
+      
       <tr>
         <td>SOUTH DAKOTA</td>
         <td>False</td>
@@ -888,7 +893,7 @@
         <td>12705.0</td>
         <td>1500.0</td>
       </tr>
-
+      
       <tr>
         <td>TENNESSEE</td>
         <td>False</td>
@@ -907,7 +912,7 @@
         <td>135353.0</td>
         <td>15239.0</td>
       </tr>
-
+      
       <tr>
         <td>TEXAS</td>
         <td>False</td>
@@ -926,7 +931,7 @@
         <td>552106.0</td>
         <td>68990.0</td>
       </tr>
-
+      
       <tr>
         <td>UTAH</td>
         <td>False</td>
@@ -945,7 +950,7 @@
         <td>68261.0</td>
         <td>9362.0</td>
       </tr>
-
+      
       <tr>
         <td>VERMONT</td>
         <td>True</td>
@@ -964,7 +969,7 @@
         <td>7637.0</td>
         <td>184.0</td>
       </tr>
-
+      
       <tr>
         <td>VIRGINIA</td>
         <td>False</td>
@@ -983,7 +988,7 @@
         <td>127285.0</td>
         <td>9848.0</td>
       </tr>
-
+      
       <tr>
         <td>WASHINGTON</td>
         <td>False</td>
@@ -1002,7 +1007,7 @@
         <td>173423.0</td>
         <td>32322.0</td>
       </tr>
-
+      
       <tr>
         <td>WEST VIRGINIA</td>
         <td>False</td>
@@ -1021,7 +1026,7 @@
         <td>25657.0</td>
         <td>2498.0</td>
       </tr>
-
+      
       <tr>
         <td>WISCONSIN</td>
         <td>False</td>
@@ -1040,7 +1045,7 @@
         <td>82455.0</td>
         <td>9958.0</td>
       </tr>
-
+      
       <tr>
         <td>WYOMING</td>
         <td>False</td>
@@ -1059,10 +1064,10 @@
         <td>8889.0</td>
         <td>800.0</td>
       </tr>
-
+      
     </table>
   </section>
 
 </body>
-
+<script src='mapGenerator.js'></script>
 </html>

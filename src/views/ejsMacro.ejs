@@ -13,6 +13,11 @@
     <meta name="description" content="Test">
     <meta content="text/html" http-equiv="Content-type" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!-- Load plotly.js into the DOM -->
+  	<script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
+  	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
   </head>
   <body>
     <!-- Optional JavaScript -->
@@ -68,7 +73,7 @@
         <h1>Tracking Crime and Punishment</h1>
         <p>This is a cool project.</p>
       </div>
-      <img src="..\resources\UnitedStates.svg" alt="Map of the US">
+      <div id='mapDiv' style="width:1000px;height:600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
     </main>
     <br>
   <section id="charcter-table">
@@ -114,5 +119,5 @@
   </section>
 
 </body>
-
+<script src='mapGenerator.js'></script>
 </html>

@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="en">
 <head>
 	<!-- Load plotly.js into the DOM -->
 	<script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
@@ -5,52 +7,7 @@
 </head>
 
 <body>
-	<div id='myDiv' style="width:1000px;height:I 800px;"><!-- Plotly chart will be drawn inside this DIV --></div>
-  <div id="tester" style="width:600px;height:250px;"></div>
-  <script>
-      d3.csv('https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/macro.csv?token=AOVV4RSYSB4X6NID76T4UD3BTER2C', function(err, rows){
-				console.log(rows);
-				function unpack(rows, key) {
-            return rows.map(function(row) { return row[key]; });
-        }
-
-        var data = [{
-            type: 'choropleth',
-            locationmode: 'USA-states',
-            locations: unpack(rows, 'jurisdiction'),
-            z: unpack(rows, 'prisoner_count'),
-            text: unpack(rows, 'jurisdiction'),
-            zmin: 0,
-            zmax: 17000,
-            colorscale: [
-                [0, 'rgb(242,240,247)'], [0.2, 'rgb(218,218,235)'],
-                [0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],
-                [0.8, 'rgb(117,107,177)'], [1, 'rgb(84,39,143)']
-            ],
-            colorbar: {
-                title: 'Prison Count',
-                thickness: 0.2
-            },
-            marker: {
-                line:{
-                    color: 'rgb(255,255,255)',
-                    width: 2
-                }
-            }
-        }];
-
-
-        var layout = {
-            title: 'All Prison',
-            geo:{
-                scope: 'usa',
-                showlakes: true,
-                lakecolor: 'rgb(255,255,255)'
-            }
-        };
-        console.log("running");
-        Plotly.newPlot("myDiv", data, layout, {showLink: false});
-    });
-
-  </script>
+	<div id='mapDiv' style="width:1000px;height:600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
 </body>
+
+<script src='mapGenerator.js'></script>
