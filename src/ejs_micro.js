@@ -7,7 +7,7 @@ let index_template = fs.readFileSync('views/ejsMicro.ejs', 'utf8');
 let stateJSON = JSON.parse(state_info);
 
 
-let stateArray = ["ALABAMA", "ALASKA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "FLORIDA", "GEORGIA"];
+let stateArray = ["ALABAMA", "ALASKA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "FLORIDA", "GEORGIA", "HAWAII", "IDAHO", "ILLINOIS", "INDIANA", "IOWA", "KANSAS", "TEXAS", "LOUISANA", "MAINE", "MARYLAND", "MASSACHUSETTS", "MICHIGAN"];
 
 
 for (let i = 0; i < 10; i++) {
