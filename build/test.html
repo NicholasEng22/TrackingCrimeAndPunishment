@@ -4,10 +4,70 @@
 	<!-- Load plotly.js into the DOM -->
 	<script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
+	<style>
+		.userSelection {
+		  border: 5px outset black;
+		}
+
+		.userSelection p{
+		  margin-left: 80px;
+		}
+
+		.graph {
+			border: 5px outset black;
+		}
+	</style>
+
 </head>
 
 <body>
 	<div id='mapDiv' style="width:1000px;height:600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+	<div class = "userSelection">
+		<h2>User selections: </h2>
+		<label for="year-select">Year:</label>
+		<select name="Years" id="year-select">
+	    <option value="all">2001-2016</option>
+	    <option value="2001">2001</option>
+			<option value="2002">2002</option>
+	    <option value="2003">2003</option>
+	    <option value="2004">2004</option>
+			<option value="2005">2005</option>
+	    <option value="2006">2006</option>
+	    <option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+		</select>
+
+		<br> <br>
+
+		<label for="crime-select">Crime:</label>
+		<select name="Types of Crime" id="crime-select">
+	    <option value="prisoner_count">Prisoner Count</option>
+			<option value="violent_crime_total">Violent Crime</option>
+	    <option value="murder_manslaughter">Murders/Manslaughter</option>
+	    <option value="robbery">Robbery</option>
+			<option value="agg_assault">Aggrevated Assault</option>
+	    <option value="property_crime_total">Property Crime</option>
+	    <option value="burglary">Burglary</option>
+			<option value="larceny">Larceny</option>
+			<option value="vehicle_theft">Vehicle Theft</option>
+		</select>
+	</div>
+
+	<h2>Graphs:</h2>
+	<div id='pie' class='graph'> </div>
+	<div id='bar' class='graph'> </div>
+
+
 </body>
 
 <script src='mapGenerator.js'></script>
