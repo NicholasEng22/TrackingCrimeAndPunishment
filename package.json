@@ -1,0 +1,25 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "This project seeks to examine Crime and Punishment within the United States.",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^3.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "prebuild": "cd src && node setup.js";
+    "build": "node ejs_macro.js && node ejs_micro.js";
+    "postbuild": "open http://localhost:3000 && node server.js";
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicholasEng22/TrackingCrimeAndPunishment.git"
+  },
+  "author": "Ari Sussman and Nick Eng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicholasEng22/TrackingCrimeAndPunishment/issues"
+  },
+  "homepage": "https://github.com/NicholasEng22/TrackingCrimeAndPunishment#readme"
+}
