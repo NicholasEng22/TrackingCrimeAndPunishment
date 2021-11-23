@@ -21,11 +21,10 @@
 			padding-left: 80px;
 		}
 
-		.userSelection p{
-		}
-
 		.graph {
 			border: 5px outset black;
+			margin: 10px;
+			padding-left: 80px;
 		}
 	</style>
 
@@ -94,7 +93,7 @@
 		<h2>User selections: </h2>
 		<label for="year-select">Year:</label>
 		<select name="Years" id="year-select" onchange="generatePlots()">
-	    <option value="all">2001-2016</option>
+	    <option value="2001-2016">2001-2016</option>
 	    <option value="2001">2001</option>
 			<option value="2002">2002</option>
 	    <option value="2003">2003</option>
@@ -131,9 +130,9 @@
 	</div>
 
 	<h2>Graphs:</h2>
-	<div id='pie' class='graph'> </div>
+	<div id='pie' class='graph' style="width:1200px;height:600px;"> </div>
 	<br>
-	<div id='bar' class='graph'> </div>
+	<div id='bar' class='graph' style="width:1200px;height:600px;"> </div>
 
 
 </body>

@@ -1,5 +1,5 @@
 let d3Data = [];
-let csv_url = "https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RXLF4CMTQYT5ZJ3VH3BTT244"; //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RRWZVUKRTXFCI63DB3BTJ7HS"
+let csv_url = "https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RWOUWAFWIWIW3IQDXTBTT4XE"; //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RRWZVUKRTXFCI63DB3BTJ7HS"
 
 function generateMap() {
     function unpack(rows, key) {
@@ -10,7 +10,7 @@ function generateMap() {
     let yearSelect = document.querySelector("#year-select").value;
 
     let rowsData = d3Data.filter(function(row) {
-      return yearSelect === "all" || yearSelect == row['year'];
+      return yearSelect === "2001-2016" || yearSelect == row['year'];
     });
 
     let min = rowsData.reduce(function(prev, current) {
@@ -64,8 +64,8 @@ function generateMap() {
 
 function generatePie(){
   var data = [{
-    values: [25, 75],
-    labels: ['Violent Crime', 'Property Crime'],
+    values: [2135, 75, 2533, 5400, 242, 9003, 253, 4793],
+    labels: ['Murder/Manslaughter', 'Rape', 'Robbery', 'Aggrevated Assault', 'Burglary', 'Larceny', 'Vehicle Theft'],
     type: 'pie'
   }];
 
@@ -95,13 +95,13 @@ function generatePlots() {
     d3.csv(csv_url, function(err, rows){
       d3Data = rows;
       generateMap();
-      //generatePie();
-       generateBar();
+      generatePie();
+      generateBar();
     });
   } else {
     generateMap();
-    // generatePie();
-     generateBar();
+    generatePie();
+    generateBar();
   }
 }
 
