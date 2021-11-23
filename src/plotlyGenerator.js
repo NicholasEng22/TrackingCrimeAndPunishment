@@ -1,5 +1,5 @@
 let d3Data = [];
-let csv_url = "https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RWOUWAFWIWIW3IQDXTBTT4XE"; //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RRWZVUKRTXFCI63DB3BTJ7HS"
+let csv_url = "../resources/crime_and_incarceration_by_state_data.csv"; //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RRWZVUKRTXFCI63DB3BTJ7HS"
 
 function generateMap() {
     function unpack(rows, key) {
