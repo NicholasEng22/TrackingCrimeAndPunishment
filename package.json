@@ -8,9 +8,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "prebuild": "cd src && node setup.js";
-    "build": "node ejs_macro.js && node ejs_micro.js";
-    "postbuild": "open http://localhost:3000 && node server.js";
+    "prebuild": "node src/setup.js",
+    "build": "node src/ejs_macro.js && node src/ejs_micro.js",
+    "postbuild": "open http://localhost:3000 && node server.js",
   },
   "repository": {
     "type": "git",
