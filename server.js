@@ -10,4 +10,4 @@ app.listen(port, () => {
   console.log(`Data Journalism at http://localhost:${port}`)
 });
 
-//ghp.publish("build", function(err) {});
+ghp.publish("build", function(err) {});
