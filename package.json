@@ -4,13 +4,14 @@
   "description": "This project seeks to examine Crime and Punishment within the United States.",
   "main": "server.js",
   "dependencies": {
-    "ejs": "^3.1.6"
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
     "prebuild": "node src/setup.js",
-    "build": "node src/ejs_macro.js && node src/ejs_micro.js",
-    "postbuild": "open http://localhost:3000 && node server.js",
+    "build": "node src/ejs_macro.js && node src/ejs_micro.js && node src/aboutGenerator.js",
+    "postbuild": "open http://localhost:3000 && node server.js"
   },
   "repository": {
     "type": "git",
