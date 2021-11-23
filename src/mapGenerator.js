@@ -1,5 +1,5 @@
 let d3Data = [];
-let csv_url = "../resources/crime_and_incarceration_by_state_data.csv"; //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RRWZVUKRTXFCI63DB3BTJ7HS"
+let csv_url = "https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RXLF4CMTQYT5ZJ3VH3BTT244"; //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RRWZVUKRTXFCI63DB3BTJ7HS"
 
 function generateMap() {
     function unpack(rows, key) {
@@ -51,7 +51,7 @@ function generateMap() {
 
 
     var layout = {
-        title: 'All Prison',
+        title: crimeSelect.value.toUpperCase() + ' from ' + yearSelect,
         geo:{
             scope: 'usa',
             showlakes: true,
@@ -95,13 +95,13 @@ function generatePlots() {
     d3.csv(csv_url, function(err, rows){
       d3Data = rows;
       generateMap();
-      // generatePie();
-      // generateBar();
+      //generatePie();
+       generateBar();
     });
   } else {
     generateMap();
     // generatePie();
-    // generateBar();
+     generateBar();
   }
 }
 
