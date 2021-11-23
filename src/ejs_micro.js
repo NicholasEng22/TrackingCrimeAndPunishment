@@ -26,5 +26,5 @@ for (let i = 0; i < 10; i++) {
     data: microSummaryTable
   });
 
-  fs.writeFileSync(("../build/states/" + stateName + ".html"), index_html, 'utf8');
+  fs.writeFileSync(("build/states/" + stateName + ".html"), index_html, 'utf8');
 }

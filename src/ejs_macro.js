@@ -21,4 +21,4 @@ let index_html = ejs.render(index_template, {
   data: macroSummaryTable
 });
 
-fs.writeFileSync('../build/index.html', index_html, 'utf8');
+fs.writeFileSync('build/index.html', index_html, 'utf8');
