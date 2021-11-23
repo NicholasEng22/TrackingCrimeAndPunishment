@@ -1,8 +1,8 @@
 const fs = require('fs');
 const ejs = require('ejs');
 
-let state_info = fs.readFileSync('../resources/IncarcerationData.json', 'utf8');
-let index_template = fs.readFileSync('views/ejsMicro.ejs', 'utf8');
+let state_info = fs.readFileSync(__dirname + '/../resources/IncarcerationData.json', 'utf8');
+let index_template = fs.readFileSync(__dirname +'/views/ejsMicro.ejs', 'utf8');
 
 let stateJSON = JSON.parse(state_info);
 
