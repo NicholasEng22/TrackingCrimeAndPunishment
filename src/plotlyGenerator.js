@@ -1,5 +1,9 @@
 let d3Data = [];
-let csv_url = "../resources/crime_and_incarceration_by_state_data.csv"; //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RRWZVUKRTXFCI63DB3BTJ7HS"
+let csv_url = "https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RXDXTUFAG3NV77JNWLBUO67I"; //"../resources/crime_and_incarceration_by_state_data.csv"
+
+function generateStateData() {
+
+}
 
 function generateMap() {
     function unpack(rows, key) {
@@ -63,8 +67,21 @@ function generateMap() {
 }
 
 function generatePie(){
+  let yearSelect = document.querySelector("#year-select").value;
+  let stateSelect = document.querySelector("#state-select").value;
+  let stateData = d3Data.filter(function(row) {
+    return ((yearSelect === "2001-2016" && row['year'] == "2016") || yearSelect == row['year']) && row['code'] == stateSelect;
+  });
   var data = [{
-    values: [2135, 75, 2533, 5400, 242, 9003, 253, 4793],
+    values: [stateData[0].murder_manslaughter,
+        stateData[0].rape_legacy,
+        stateData[0].robbery,
+        stateData[0].agg_assault,
+        stateData[0].burglary,
+        stateData[0].larceny,
+        stateData[0].vehicle_theft
+      ],
+    // values: [2135, 75, 2533, 5400, 242, 9003, 253, 4793],
     labels: ['Murder/Manslaughter', 'Rape', 'Robbery', 'Aggrevated Assault', 'Burglary', 'Larceny', 'Vehicle Theft'],
     type: 'pie'
   }];
@@ -90,6 +107,73 @@ function generateBar(){
   Plotly.newPlot('bar', data);
 }
 
+function generateStateCrimeBarGraphMacro(){
+  let crimeSelect = document.querySelector("#crime-select").value;
+  let crimeData = d3Data.reduce(function(prev, curr) {
+    if(prev[curr.code] == null) {
+      prev[curr.code] = {
+        x: [curr.year],
+        y: [curr[crimeSelect]]
+      };
+    } else {
+      prev[curr.code].x.push(curr.year);
+      prev[curr.code].y.push(curr[crimeSelect]);
+    }
+    return prev;
+  }, {});
+
+  let plotData = Object.keys(crimeData).map(function(state){
+    let stateData = crimeData[state];
+    return {
+      x: stateData.x,
+      y: stateData.y,
+      mode: 'lines',
+      name: state
+    }
+  });
+
+  console.log(crimeData);
+  console.log(plotData);
+
+  Plotly.newPlot('lineBarMacro', plotData);
+}
+
+function generateStateCrimeBarGraphMicro(){
+  let crimeSelect = document.querySelector("#crime-select").value;
+  let stateSelect = document.querySelector("#state-select").value;
+  let crimeData = d3Data.reduce(function(prev, curr) {
+    if(prev[curr.code] == null) {
+      prev[curr.code] = {
+        x: [curr.year],
+        y: [curr[crimeSelect]]
+      };
+    } else {
+      prev[curr.code].x.push(curr.year);
+      prev[curr.code].y.push(curr[crimeSelect]);
+    }
+    return prev;
+  }, {});
+
+  let plotData = Object.keys(crimeData).map(function(state){
+    let stateData = crimeData[state];
+    return {
+      x: stateData.x,
+      y: stateData.y,
+      mode: 'lines',
+      name: state
+    }
+  });
+
+  plotData = plotData.filter(function(stateData){
+    return stateData.name == stateSelect;
+  });
+  console.log("micro");
+  console.log(crimeData);
+  console.log(plotData);
+
+  Plotly.newPlot('lineBarMicro', plotData);
+}
+
 function generatePlots() {
   if(d3Data.length === 0 ) {
     d3.csv(csv_url, function(err, rows){
@@ -97,11 +181,15 @@ function generatePlots() {
       generateMap();
       generatePie();
       generateBar();
+      generateStateCrimeBarGraphMacro();
+      generateStateCrimeBarGraphMicro();
     });
   } else {
     generateMap();
     generatePie();
     generateBar();
+    generateStateCrimeBarGraphMacro();
+    generateStateCrimeBarGraphMicro();
   }
 }
 

@@ -127,10 +127,20 @@
 			<option value="vehicle_theft">Vehicle Theft</option>
 			<option value="state_population">State Population</option>
 		</select>
+
+		<label for="state-select">State:</label>
+		<select name="States" id="state-select" onchange="generatePlots()">
+	    <option value="NY">New York</option>
+			<option value="NJ">New Jersey</option>
+		</select>
 	</div>
 
 	<h2>Graphs:</h2>
 	<div id='pie' class='graph' style="width:1200px;height:600px;"> </div>
+	<br>
+	<div id='lineBarMacro' class='graph' style="width:1200px;height:600px;"> </div>
+	<br>
+	<div id='lineBarMicro' class='graph' style="width:1200px;height:600px;"> </div>
 	<br>
 	<div id='bar' class='graph' style="width:1200px;height:600px;"> </div>
 
