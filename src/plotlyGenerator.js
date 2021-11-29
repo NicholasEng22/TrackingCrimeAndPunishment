@@ -1,5 +1,5 @@
 let d3Data = [];
-let csv_url = "https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv?token=AOVV4RXDXTUFAG3NV77JNWLBUO67I"; //"../resources/crime_and_incarceration_by_state_data.csv"
+let csv_url = "https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csv"; //"../resources/crime_and_incarceration_by_state_data.csv"
 
 function generateStateData() {
 
@@ -66,7 +66,7 @@ function generateMap() {
     Plotly.newPlot("mapDiv", data, layout, {showLink: false});
 }
 
-function generatePie(){
+function microCrimePieChart(){
   let yearSelect = document.querySelector("#year-select").value;
   let stateSelect = document.querySelector("#state-select").value;
   let stateData = d3Data.filter(function(row) {
@@ -87,12 +87,40 @@ function generatePie(){
   }];
 
   var layout = {
-    title: 'Types of Crime in State',
+    title: 'Types of Crime in ' + stateSelect,
     height: 500,
     width: 700
   };
 
-  Plotly.newPlot('pie', data, layout);
+  Plotly.newPlot('microCrimePieChart', data, layout);
+}
+
+function macroCrimePieChart(){
+  let yearSelect = document.querySelector("#year-select").value;
+  let stateData = d3Data.filter(function(row) {
+    return ((yearSelect === "2001-2016" && row['year'] == "2016") || yearSelect == row['year']) && row['code'] == 'FED';
+  });
+  var data = [{
+    values: [stateData[0].murder_manslaughter,
+        stateData[0].rape_legacy,
+        stateData[0].robbery,
+        stateData[0].agg_assault,
+        stateData[0].burglary,
+        stateData[0].larceny,
+        stateData[0].vehicle_theft
+      ],
+    // values: [2135, 75, 2533, 5400, 242, 9003, 253, 4793],
+    labels: ['Murder/Manslaughter', 'Rape', 'Robbery', 'Aggrevated Assault', 'Burglary', 'Larceny', 'Vehicle Theft'],
+    type: 'pie'
+  }];
+
+  var layout = {
+    title: 'Types of Crime in the US',
+    height: 500,
+    width: 700
+  };
+
+  Plotly.newPlot('macroCrimePieChart', data, layout);
 }
 
 function generateBar(){
@@ -179,14 +207,16 @@ function generatePlots() {
     d3.csv(csv_url, function(err, rows){
       d3Data = rows;
       generateMap();
-      generatePie();
+      microCrimePieChart();
+      macroCrimePieChart();
       generateBar();
       generateStateCrimeBarGraphMacro();
       generateStateCrimeBarGraphMicro();
     });
   } else {
     generateMap();
-    generatePie();
+    microCrimePieChart();
+    macroCrimePieChart();
     generateBar();
     generateStateCrimeBarGraphMacro();
     generateStateCrimeBarGraphMicro();
