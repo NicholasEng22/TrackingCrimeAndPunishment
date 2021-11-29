@@ -15,6 +15,13 @@ stateJSON.forEach(function(state) {
   }
 });
 
+let about_html = ejs.render(about_template, {
+  filename: __dirname + '/views/about.ejs',
+  data: macroSummaryTable
+});
+
+fs.writeFileSync('build/about.html', about_html, 'utf8');
+
 
 let index_html = ejs.render(index_template, {
   filename: __dirname + '/views/ejsMacro.ejs',
