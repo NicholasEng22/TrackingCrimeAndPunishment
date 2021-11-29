@@ -1,6 +1,5 @@
 # Dependency directories
 node_modules/
-build/
 
 # Specific files
 .DS_Store
