@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Load plotly.js into the DOM -->
+	<script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>Crime and Punishment Datatable</title>
+	<meta name="author" content="You">
+	<meta name="description" content="Test">
+	<meta content="text/html" http-equiv="Content-type" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+	<style>
+		.userSelection {
+		  border: 5px outset black;
+			margin: 10px;
+			padding-left: 80px;
+		}
+
+		.graph {
+			border: 5px outset black;
+			margin: 10px;
+			padding-left: 80px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="#">Trinity School</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Index</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown01">
+						<a class="dropdown-item" href="alabama.html">Alabma</a>
+						<a class="dropdown-item" href="alaska.html">Alaska</a>
+						<a class="dropdown-item" href="arizona.html">Arizona</a>
+						<a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+						<a class="dropdown-item" href="california.html">California</a>
+						<a class="dropdown-item" href="colorado.html">Colorado</a>
+						<a class="dropdown-item" href="connecticut.html">Connecticut</a>
+						<a class="dropdown-item" href="delaware.html">Delaware</a>
+						<a class="dropdown-item" href="flordia.html">Florida</a>
+						<a class="dropdown-item" href="georgia.html">Georgia</a>
+					</div>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+
+	<main role="main" class="container">
+		<h1>Test</h1>
+		<div class="starter-template">
+			<br>
+			<h1>Tracking Crime and Punishment</h1>
+			<p>This is a cool project.</p>
+		</div>
+	</main>
+	<br>
+
+	<div id='mapDiv' style="width:1200px;height:600px;margin:auto;"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+	<div class = "userSelection">
+		<h2>User selections: </h2>
+		<label for="year-select">Year:</label>
+		<select name="Years" id="year-select" onchange="generatePlots()">
+	    <option value="2001-2016">2001-2016</option>
+	    <option value="2001">2001</option>
+			<option value="2002">2002</option>
+	    <option value="2003">2003</option>
+	    <option value="2004">2004</option>
+			<option value="2005">2005</option>
+	    <option value="2006">2006</option>
+	    <option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+		</select>
+
+		<br> <br>
+
+		<label for="crime-select">Crime:</label>
+		<select name="Types of Crime" id="crime-select" onchange="generatePlots()">
+	    <option value="prisoners_per_capita_per_one_hundred_thousand">Prisoner Count Per Capita</option>
+			<option value="violent_crime_total">Violent Crime</option>
+	    <option value="murder_manslaughter_per_capita_per_one_hundred_thousand">Murders/Manslaughter Per Capita</option>
+			<option value="rape_legacy_per_capita_per_one_hundred_thousand">Rape Legacy Per Capita</option>
+	    <option value="robbery_per_capita_per_one_hundred_thousand">Robbery Per Capita</option>
+			<option value="agg_assault_per_capita_per_one_hundred_thousand">Aggrevated Assault Per Capita</option>
+	    <option value="property_crime_total">Property Crime</option>
+	    <option value="burglary_per_capita_per_one_hundred_thousand">Burglary Per Capita</option>
+			<option value="larceny_per_capita_per_one_hundred_thousand">Larceny Per Capita</option>
+			<option value="vehicle_theft_per_capita_per_one_hundred_thousand">Vehicle Theft Per Capita</option>
+			<option value="total_crime_per_capita_per_one_hundred_thousand">Total Crime Per Capita</option>
+		</select>
+
+		<label for="state-select">State:</label>
+		<select name="States" id="state-select" onchange="generatePlots()">
+	    <option value="NY">New York</option>
+			<option value="NJ">New Jersey</option>
+		</select>
+	</div>
+
+	<h2>Graphs:</h2>
+	<div id='microCrimePieChart' class='graph' style="width:1200px;height:600px;"> </div>
+	<br>
+	<div id='macroCrimePieChart' class='graph' style="width:1200px;height:600px;"> </div>
+	<br>
+	<div id='lineBarMacro' class='graph' style="width:1200px;height:600px;"> </div>
+	<br>
+	<div id='lineBarMicro' class='graph' style="width:1200px;height:600px;"> </div>
+	<br>
+	<div id='bar' class='graph' style="width:1200px;height:600px;"> </div>
+	<br>
+	<div id='table' class='graph' style="width:1200px;height:600px;"> </div>
+
+
+</body>
+
+<script src='../src/plotlyGenerator.js'></script>
