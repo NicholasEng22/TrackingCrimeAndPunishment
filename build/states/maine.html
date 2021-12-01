@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Crime and Punishment Datatable</title>
+    <meta name="author" content="You">
+    <meta name="description" content="Test">
+    <meta content="text/html" http-equiv="Content-type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Trinity School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Index</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="alabama.html">Alabma</a>
+              <a class="dropdown-item" href="alaska.html">Alaska</a>
+              <a class="dropdown-item" href="arizona.html">Arizona</a>
+              <a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+              <a class="dropdown-item" href="california.html">California</a>
+              <a class="dropdown-item" href="colorado.html">Colorado</a>
+              <a class="dropdown-item" href="connecticut.html">Connecticut</a>
+              <a class="dropdown-item" href="delaware.html">Delaware</a>
+              <a class="dropdown-item" href="flordia.html">Florida</a>
+              <a class="dropdown-item" href="georgia.html">Georgia</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <h1>Test</h1>
+      <div class="starter-template">
+        <br>
+        <h1>Tracking Crime and Punishment</h1>
+        <p>This is a cool project.</p>
+      </div>
+      <img src="..\..\resources\UnitedStates.svg" alt="Map of the US">
+    </main>
+    <br>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Includes_jails</th>
+        <th>Year</th>
+        <th>Prisoner Count</th>
+        <th>Crime Reporting Change</th>
+        <th>Crimes Estimated</th>
+        <th>State Population</th>
+        <th>Violent Crime Total</th>
+        <th>Murder Manslaughter</th>
+        <th>Rape Revised</th>
+        <th>Robbery</th>
+        <th>Aggravated Assault</th>
+        <th>Property Crime Total</th>
+        <th>Burglary</th>
+        <th>Larceny</th>
+        <th>Vehicle Theft</th>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2001</td>
+        <td>1675</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1284470.0</td>
+        <td>1435.0</td>
+        <td>19.0</td>
+        <td></td>
+        <td>264.0</td>
+        <td>826.0</td>
+        <td>33154.0</td>
+        <td>6898.0</td>
+        <td>24585.0</td>
+        <td>1671.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2002</td>
+        <td>1855</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1294894.0</td>
+        <td>1396.0</td>
+        <td>14.0</td>
+        <td></td>
+        <td>270.0</td>
+        <td>735.0</td>
+        <td>32985.0</td>
+        <td>6965.0</td>
+        <td>24591.0</td>
+        <td>1429.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2003</td>
+        <td>1974</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1309205.0</td>
+        <td>1422.0</td>
+        <td>16.0</td>
+        <td></td>
+        <td>289.0</td>
+        <td>763.0</td>
+        <td>32078.0</td>
+        <td>6579.0</td>
+        <td>24043.0</td>
+        <td>1456.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2004</td>
+        <td>2013</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1314985.0</td>
+        <td>1364.0</td>
+        <td>18.0</td>
+        <td></td>
+        <td>289.0</td>
+        <td>742.0</td>
+        <td>31740.0</td>
+        <td>6341.0</td>
+        <td>24096.0</td>
+        <td>1303.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2005</td>
+        <td>1970</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1318220.0</td>
+        <td>1483.0</td>
+        <td>19.0</td>
+        <td></td>
+        <td>323.0</td>
+        <td>815.0</td>
+        <td>31889.0</td>
+        <td>6323.0</td>
+        <td>24218.0</td>
+        <td>1348.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2006</td>
+        <td>2083</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1321574.0</td>
+        <td>1533.0</td>
+        <td>23.0</td>
+        <td></td>
+        <td>383.0</td>
+        <td>786.0</td>
+        <td>33658.0</td>
+        <td>6846.0</td>
+        <td>25465.0</td>
+        <td>1347.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2007</td>
+        <td>2148</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1317207.0</td>
+        <td>1565.0</td>
+        <td>20.0</td>
+        <td></td>
+        <td>349.0</td>
+        <td>804.0</td>
+        <td>32249.0</td>
+        <td>6745.0</td>
+        <td>24228.0</td>
+        <td>1276.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2008</td>
+        <td>2047</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1316456.0</td>
+        <td>1572.0</td>
+        <td>31.0</td>
+        <td></td>
+        <td>333.0</td>
+        <td>829.0</td>
+        <td>32433.0</td>
+        <td>6559.0</td>
+        <td>24695.0</td>
+        <td>1179.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2009</td>
+        <td>2074</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1318301.0</td>
+        <td>1580.0</td>
+        <td>26.0</td>
+        <td></td>
+        <td>399.0</td>
+        <td>780.0</td>
+        <td>31706.0</td>
+        <td>6729.0</td>
+        <td>23955.0</td>
+        <td>1022.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2010</td>
+        <td>1954</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1327379.0</td>
+        <td>1621.0</td>
+        <td>24.0</td>
+        <td></td>
+        <td>412.0</td>
+        <td>796.0</td>
+        <td>32900.0</td>
+        <td>7364.0</td>
+        <td>24547.0</td>
+        <td>989.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2011</td>
+        <td>1978</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1328544.0</td>
+        <td>1638.0</td>
+        <td>26.0</td>
+        <td></td>
+        <td>370.0</td>
+        <td>848.0</td>
+        <td>33829.0</td>
+        <td>7865.0</td>
+        <td>24886.0</td>
+        <td>1078.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2012</td>
+        <td>1977</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1328501.0</td>
+        <td>1626.0</td>
+        <td>26.0</td>
+        <td></td>
+        <td>420.0</td>
+        <td>808.0</td>
+        <td>33398.0</td>
+        <td>7476.0</td>
+        <td>24931.0</td>
+        <td>991.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2013</td>
+        <td>2073</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1328702.0</td>
+        <td>1761.0</td>
+        <td>24.0</td>
+        <td>495.0</td>
+        <td>335.0</td>
+        <td>907.0</td>
+        <td>30454.0</td>
+        <td>6480.0</td>
+        <td>23063.0</td>
+        <td>911.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2014</td>
+        <td>2199</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1330089.0</td>
+        <td>1700.0</td>
+        <td>21.0</td>
+        <td>485.0</td>
+        <td>304.0</td>
+        <td>890.0</td>
+        <td>26421.0</td>
+        <td>5030.0</td>
+        <td>20592.0</td>
+        <td>799.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2015</td>
+        <td>2190</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1329328.0</td>
+        <td>1729.0</td>
+        <td>23.0</td>
+        <td>474.0</td>
+        <td>311.0</td>
+        <td>921.0</td>
+        <td>24327.0</td>
+        <td>4684.0</td>
+        <td>18829.0</td>
+        <td>814.0</td>
+      </tr>
+      
+      <tr>
+        <td>MAINE</td>
+        <td>False</td>
+        <td>2016</td>
+        <td>2356</td>
+        <td>False</td>
+        <td>False</td>
+        <td>1330232.0</td>
+        <td>1649.0</td>
+        <td>20.0</td>
+        <td>413.0</td>
+        <td>268.0</td>
+        <td>948.0</td>
+        <td>21908.0</td>
+        <td>4001.0</td>
+        <td>17131.0</td>
+        <td>776.0</td>
+      </tr>
+      
+    </table>
+  </section>
+
+</body>
+
+</html>

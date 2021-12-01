@@ -1,5 +1,6 @@
 let d3Data = [];
-let csv_url = "https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csvV2.csv"; //"../resources/crime_and_incarceration_by_state_data.csv"
+let csv_url = "../resources/crime_and_incarceration_by_state_data.csvV2.csv"; //"../resources/crime_and_incarceration_by_state_data.csv"
+//"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csvV2.csv
 
 function generateStateData() {
 
@@ -268,22 +269,23 @@ function generatePlots() {
     d3.csv(csv_url, function(err, rows){
       d3Data = rows;
       generateMap();
-      microCrimePieChart();
-      macroCrimePieChart();
-      generateBar();
-      generateStateCrimeBarGraphMacro();
-      generateStateCrimeBarGraphMicro();
-      dataTable();
+      // microCrimePieChart();
+      // macroCrimePieChart();
+      // generateBar();
+      // generateStateCrimeBarGraphMacro();
+      // generateStateCrimeBarGraphMicro();
+      // dataTable();
     });
   } else {
     generateMap();
-    microCrimePieChart();
-    macroCrimePieChart();
-    generateBar();
-    generateStateCrimeBarGraphMacro();
-    generateStateCrimeBarGraphMicro();
-    dataTable();
+    // microCrimePieChart();
+    // macroCrimePieChart();
+    // generateBar();
+    // generateStateCrimeBarGraphMacro();
+    // generateStateCrimeBarGraphMicro();
+    // dataTable();
   }
 }
 
 generatePlots();
+console.log("Hi there");

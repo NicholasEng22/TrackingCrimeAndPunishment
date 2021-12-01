@@ -3,3 +3,4 @@ node_modules/
 
 # Specific files
 .DS_Store
+test.html

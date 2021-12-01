@@ -18,62 +18,59 @@
     <!-- Load plotly.js into the DOM -->
   	<script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
   	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
-    
+
   </head>
   <body>
     <%- include ('global/partials/navbar');  %>
-    <main role="main" class="container">
-      <h1>Test</h1>
-      <div class="starter-template">
-        <br>
-        <h1>Tracking Crime and Punishment</h1>
-        <p>This is a cool project.</p>
-      </div>
-      <div id='mapDiv' style="width:1000px;height:600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
-    </main>
+
     <br>
-  <section id="charcter-table">
-    <table>
-      <tr>
-        <th>Jurisdiction</th>
-        <th>Year</th>
-        <th>Includes_jails</th>
-        <th>Prisoner Count</th>
-        <th>Crime Reporting Change</th>
-        <th>Crimes Estimated</th>
-        <th>State Population</th>
-        <th>Violent Crime Total</th>
-        <th>Murder Manslaughter</th>
-        <th>Rape Revised</th>
-        <th>Aggravated Assault</th>
-        <th>Property Crime Total</th>
-        <th>Burglary</th>
-        <th>Larceny</th>
-        <th>Vehicle Theft</th>
-      </tr>
-      <% for(let i=1; i<data.length; i++){ %>
-      <tr>
-        <td><%= data[i].jurisdiction %></td>
-        <td><%= data[i].includes_jails %></td>
-        <td><%= data[i].year %></td>
-        <td><%= data[i].prisoner_count %></td>
-        <td><%= data[i].crime_reporting_change %></td>
-        <td><%= data[i].crimes_estimated %></td>
-        <td><%= data[i].state_population %></td>
-        <td><%= data[i].violent_crime_total %></td>
-        <td><%= data[i].murder_manslaughter %></td>
-        <td><%= data[i].rape_revised %></td>
-        <td><%= data[i].robbery %></td>
-        <td><%= data[i].agg_assault %></td>
-        <td><%= data[i].property_crime_total %></td>
-        <td><%= data[i].burglary %></td>
-        <td><%= data[i].larceny %></td>
-        <td><%= data[i].vehicle_theft %></td>
-      </tr>
-      <%}%>
-    </table>
-  </section>
+    <h1>Tracking Crime and Punishment</h1>
+    <p>This is a cool project.</p>
+    <br>
+
+    <div class = "userSelection">
+  		<h2>User selections: </h2>
+  		<label for="year-select">Year:</label>
+  		<select name="Years" id="year-select" onchange="generatePlots()">
+  	    <option value="2001-2016">2001-2016</option>
+  	    <option value="2001">2001</option>
+  			<option value="2002">2002</option>
+  	    <option value="2003">2003</option>
+  	    <option value="2004">2004</option>
+  			<option value="2005">2005</option>
+  	    <option value="2006">2006</option>
+  	    <option value="2007">2007</option>
+  			<option value="2008">2008</option>
+  			<option value="2009">2009</option>
+  			<option value="2010">2010</option>
+  			<option value="2011">2011</option>
+  			<option value="2012">2012</option>
+  			<option value="2013">2013</option>
+  			<option value="2014">2014</option>
+  			<option value="2015">2015</option>
+  			<option value="2016">2016</option>
+  		</select>
+
+  		<br> <br>
+
+  		<label for="crime-select">Attribute/Crime:</label>
+  		<select name="Types of Crime" id="crime-select" onchange="generatePlots()">
+  	    <option value="prisoners_per_capita_per_one_hundred_thousand">Prisoner Count Per Capita</option>
+  			<option value="violent_crime_total">Violent Crime</option>
+  	    <option value="murder_manslaughter_per_capita_per_one_hundred_thousand">Murders/Manslaughter Per Capita</option>
+  			<option value="rape_legacy_per_capita_per_one_hundred_thousand">Rape Legacy Per Capita</option>
+  	    <option value="robbery_per_capita_per_one_hundred_thousand">Robbery Per Capita</option>
+  			<option value="agg_assault_per_capita_per_one_hundred_thousand">Aggrevated Assault Per Capita</option>
+  	    <option value="property_crime_total">Property Crime</option>
+  	    <option value="burglary_per_capita_per_one_hundred_thousand">Burglary Per Capita</option>
+  			<option value="larceny_per_capita_per_one_hundred_thousand">Larceny Per Capita</option>
+  			<option value="vehicle_theft_per_capita_per_one_hundred_thousand">Vehicle Theft Per Capita</option>
+  			<option value="total_crime_per_capita_per_one_hundred_thousand">Total Crime Per Capita</option>
+  			<!-- <option value="state_population">State Population</option> Must remove FED from state population -->
+  		</select>
+
   <%- include ('global/partials/footer');  %>
 </body>
-<script src='mapGenerator.js'></script>
+<script>console.log("running");</script>
+<script src='../plotlyGenerator.js'></script>
 </html>

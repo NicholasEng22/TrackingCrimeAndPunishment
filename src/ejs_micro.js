@@ -10,7 +10,7 @@ let stateJSON = JSON.parse(state_info);
 let stateArray = ["ALABAMA", "ALASKA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "FLORIDA", "GEORGIA", "HAWAII", "IDAHO", "ILLINOIS", "INDIANA", "IOWA", "KANSAS", "TEXAS", "LOUISANA", "MAINE", "MARYLAND", "MASSACHUSETTS", "MICHIGAN"];
 
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < stateArray.length; i++) {
   let microSummaryTable = [];
 
   stateJSON.forEach(function(state) {

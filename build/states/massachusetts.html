@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Crime and Punishment Datatable</title>
+    <meta name="author" content="You">
+    <meta name="description" content="Test">
+    <meta content="text/html" http-equiv="Content-type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Trinity School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Index</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="alabama.html">Alabma</a>
+              <a class="dropdown-item" href="alaska.html">Alaska</a>
+              <a class="dropdown-item" href="arizona.html">Arizona</a>
+              <a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+              <a class="dropdown-item" href="california.html">California</a>
+              <a class="dropdown-item" href="colorado.html">Colorado</a>
+              <a class="dropdown-item" href="connecticut.html">Connecticut</a>
+              <a class="dropdown-item" href="delaware.html">Delaware</a>
+              <a class="dropdown-item" href="flordia.html">Florida</a>
+              <a class="dropdown-item" href="georgia.html">Georgia</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <h1>Test</h1>
+      <div class="starter-template">
+        <br>
+        <h1>Tracking Crime and Punishment</h1>
+        <p>This is a cool project.</p>
+      </div>
+      <img src="..\..\resources\UnitedStates.svg" alt="Map of the US">
+    </main>
+    <br>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Includes_jails</th>
+        <th>Year</th>
+        <th>Prisoner Count</th>
+        <th>Crime Reporting Change</th>
+        <th>Crimes Estimated</th>
+        <th>State Population</th>
+        <th>Violent Crime Total</th>
+        <th>Murder Manslaughter</th>
+        <th>Rape Revised</th>
+        <th>Robbery</th>
+        <th>Aggravated Assault</th>
+        <th>Property Crime Total</th>
+        <th>Burglary</th>
+        <th>Larceny</th>
+        <th>Vehicle Theft</th>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2001</td>
+        <td>10203</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6401164.0</td>
+        <td>30585.0</td>
+        <td>143.0</td>
+        <td></td>
+        <td>6476.0</td>
+        <td>22110.0</td>
+        <td>167079.0</td>
+        <td>32430.0</td>
+        <td>106821.0</td>
+        <td>27828.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2002</td>
+        <td>9879</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6421800.0</td>
+        <td>31137.0</td>
+        <td>173.0</td>
+        <td></td>
+        <td>7169.0</td>
+        <td>22018.0</td>
+        <td>167753.0</td>
+        <td>33243.0</td>
+        <td>107922.0</td>
+        <td>26588.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2003</td>
+        <td>9828</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6420357.0</td>
+        <td>30377.0</td>
+        <td>140.0</td>
+        <td></td>
+        <td>8011.0</td>
+        <td>20378.0</td>
+        <td>164543.0</td>
+        <td>34963.0</td>
+        <td>104069.0</td>
+        <td>25511.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2004</td>
+        <td>9825</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6407382.0</td>
+        <td>29489.0</td>
+        <td>171.0</td>
+        <td></td>
+        <td>7484.0</td>
+        <td>20040.0</td>
+        <td>158150.0</td>
+        <td>34497.0</td>
+        <td>101605.0</td>
+        <td>22048.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2005</td>
+        <td>10348</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6433367.0</td>
+        <td>29644.0</td>
+        <td>178.0</td>
+        <td></td>
+        <td>7837.0</td>
+        <td>19878.0</td>
+        <td>151727.0</td>
+        <td>34728.0</td>
+        <td>98079.0</td>
+        <td>18920.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2006</td>
+        <td>10773</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6437193.0</td>
+        <td>32217.0</td>
+        <td>188.0</td>
+        <td></td>
+        <td>8080.0</td>
+        <td>22178.0</td>
+        <td>153943.0</td>
+        <td>35243.0</td>
+        <td>100725.0</td>
+        <td>17975.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2007</td>
+        <td>11071</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6449755.0</td>
+        <td>28487.0</td>
+        <td>187.0</td>
+        <td></td>
+        <td>7021.0</td>
+        <td>19636.0</td>
+        <td>154743.0</td>
+        <td>35767.0</td>
+        <td>103925.0</td>
+        <td>15051.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2008</td>
+        <td>11174</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6497967.0</td>
+        <td>30137.0</td>
+        <td>166.0</td>
+        <td></td>
+        <td>7077.0</td>
+        <td>21143.0</td>
+        <td>155919.0</td>
+        <td>36251.0</td>
+        <td>106913.0</td>
+        <td>12755.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2009</td>
+        <td>11156</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6593587.0</td>
+        <td>30503.0</td>
+        <td>173.0</td>
+        <td></td>
+        <td>7467.0</td>
+        <td>21129.0</td>
+        <td>153178.0</td>
+        <td>34515.0</td>
+        <td>106799.0</td>
+        <td>11864.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2010</td>
+        <td>11162</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6555466.0</td>
+        <td>30737.0</td>
+        <td>214.0</td>
+        <td></td>
+        <td>6897.0</td>
+        <td>21842.0</td>
+        <td>154496.0</td>
+        <td>37903.0</td>
+        <td>105124.0</td>
+        <td>11469.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2011</td>
+        <td>11467</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6607003.0</td>
+        <td>28232.0</td>
+        <td>184.0</td>
+        <td></td>
+        <td>6768.0</td>
+        <td>19626.0</td>
+        <td>148829.0</td>
+        <td>36403.0</td>
+        <td>101644.0</td>
+        <td>10782.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2012</td>
+        <td>11127</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6645303.0</td>
+        <td>27047.0</td>
+        <td>121.0</td>
+        <td></td>
+        <td>6555.0</td>
+        <td>18721.0</td>
+        <td>143325.0</td>
+        <td>34635.0</td>
+        <td>99453.0</td>
+        <td>9237.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2013</td>
+        <td>10622</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6708874.0</td>
+        <td>27264.0</td>
+        <td>138.0</td>
+        <td>2303.0</td>
+        <td>6705.0</td>
+        <td>18118.0</td>
+        <td>137274.0</td>
+        <td>30716.0</td>
+        <td>97437.0</td>
+        <td>9121.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2014</td>
+        <td>10447</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6745408.0</td>
+        <td>26399.0</td>
+        <td>132.0</td>
+        <td>2180.0</td>
+        <td>6036.0</td>
+        <td>18051.0</td>
+        <td>125267.0</td>
+        <td>24964.0</td>
+        <td>92043.0</td>
+        <td>8260.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2015</td>
+        <td>9493</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6794422.0</td>
+        <td>26562.0</td>
+        <td>128.0</td>
+        <td>2075.0</td>
+        <td>5288.0</td>
+        <td>19071.0</td>
+        <td>114871.0</td>
+        <td>21890.0</td>
+        <td>84912.0</td>
+        <td>8069.0</td>
+      </tr>
+      
+      <tr>
+        <td>MASSACHUSETTS</td>
+        <td>False</td>
+        <td>2016</td>
+        <td>9038</td>
+        <td>False</td>
+        <td>False</td>
+        <td>6823721.0</td>
+        <td>25975.0</td>
+        <td>135.0</td>
+        <td>2141.0</td>
+        <td>5365.0</td>
+        <td>18334.0</td>
+        <td>106430.0</td>
+        <td>19204.0</td>
+        <td>79155.0</td>
+        <td>8071.0</td>
+      </tr>
+      
+    </table>
+  </section>
+
+</body>
+
+</html>
