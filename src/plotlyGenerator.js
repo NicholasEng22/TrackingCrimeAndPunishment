@@ -2,10 +2,6 @@ let d3Data = [];
 let csv_url = "crime_and_incarceration_by_state_data.csvV2.csv"; //"../resources/crime_and_incarceration_by_state_data.csv"
 //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csvV2.csv
 
-function generateStateData() {
-
-}
-
 function generateMap() {
     function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
