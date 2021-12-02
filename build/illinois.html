@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Crime and Punishment Datatable</title>
+    <meta name="author" content="You">
+    <meta name="description" content="Test">
+    <meta content="text/html" http-equiv="Content-type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Trinity School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Index</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="alabama.html">Alabma</a>
+              <a class="dropdown-item" href="alaska.html">Alaska</a>
+              <a class="dropdown-item" href="arizona.html">Arizona</a>
+              <a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+              <a class="dropdown-item" href="california.html">California</a>
+              <a class="dropdown-item" href="colorado.html">Colorado</a>
+              <a class="dropdown-item" href="connecticut.html">Connecticut</a>
+              <a class="dropdown-item" href="delaware.html">Delaware</a>
+              <a class="dropdown-item" href="flordia.html">Florida</a>
+              <a class="dropdown-item" href="georgia.html">Georgia</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <h1>Test</h1>
+      <div class="starter-template">
+        <br>
+        <h1>Tracking Crime and Punishment</h1>
+        <p>This is a cool project.</p>
+      </div>
+      <img src="..\..\resources\UnitedStates.svg" alt="Map of the US">
+    </main>
+    <br>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Includes_jails</th>
+        <th>Year</th>
+        <th>Prisoner Count</th>
+        <th>Crime Reporting Change</th>
+        <th>Crimes Estimated</th>
+        <th>State Population</th>
+        <th>Violent Crime Total</th>
+        <th>Murder Manslaughter</th>
+        <th>Rape Revised</th>
+        <th>Robbery</th>
+        <th>Aggravated Assault</th>
+        <th>Property Crime Total</th>
+        <th>Burglary</th>
+        <th>Larceny</th>
+        <th>Vehicle Theft</th>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2001</td>
+        <td>44348</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12520227.0</td>
+        <td>79270.0</td>
+        <td>982.0</td>
+        <td></td>
+        <td>24931.0</td>
+        <td>49347.0</td>
+        <td>434648.0</td>
+        <td>79158.0</td>
+        <td>306757.0</td>
+        <td>48733.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2002</td>
+        <td>42693</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12586447.0</td>
+        <td>75759.0</td>
+        <td>961.0</td>
+        <td></td>
+        <td>25314.0</td>
+        <td>45114.0</td>
+        <td>430479.0</td>
+        <td>81440.0</td>
+        <td>304227.0</td>
+        <td>44812.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2003</td>
+        <td>43418</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12649087.0</td>
+        <td>70376.0</td>
+        <td>895.0</td>
+        <td></td>
+        <td>23786.0</td>
+        <td>41506.0</td>
+        <td>415885.0</td>
+        <td>78345.0</td>
+        <td>295907.0</td>
+        <td>41633.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2004</td>
+        <td>44054</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12712016.0</td>
+        <td>69365.0</td>
+        <td>780.0</td>
+        <td></td>
+        <td>22582.0</td>
+        <td>41783.0</td>
+        <td>403486.0</td>
+        <td>76088.0</td>
+        <td>287025.0</td>
+        <td>40373.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2005</td>
+        <td>44919</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12765427.0</td>
+        <td>70496.0</td>
+        <td>770.0</td>
+        <td></td>
+        <td>23255.0</td>
+        <td>42158.0</td>
+        <td>394670.0</td>
+        <td>77635.0</td>
+        <td>277662.0</td>
+        <td>39373.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2006</td>
+        <td>45106</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12831970.0</td>
+        <td>69498.0</td>
+        <td>780.0</td>
+        <td></td>
+        <td>23782.0</td>
+        <td>40858.0</td>
+        <td>387478.0</td>
+        <td>77259.0</td>
+        <td>272578.0</td>
+        <td>37641.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2007</td>
+        <td>45215</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12852548.0</td>
+        <td>68528.0</td>
+        <td>752.0</td>
+        <td></td>
+        <td>23100.0</td>
+        <td>40573.0</td>
+        <td>377322.0</td>
+        <td>75524.0</td>
+        <td>267911.0</td>
+        <td>33887.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2008</td>
+        <td>45474</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12901563.0</td>
+        <td>67780.0</td>
+        <td>790.0</td>
+        <td></td>
+        <td>24054.0</td>
+        <td>38818.0</td>
+        <td>378355.0</td>
+        <td>78968.0</td>
+        <td>266815.0</td>
+        <td>32572.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2009</td>
+        <td>45161</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12910409.0</td>
+        <td>64185.0</td>
+        <td>773.0</td>
+        <td></td>
+        <td>22923.0</td>
+        <td>36588.0</td>
+        <td>353347.0</td>
+        <td>77850.0</td>
+        <td>248821.0</td>
+        <td>26676.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2010</td>
+        <td>48418</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12841980.0</td>
+        <td>57132.0</td>
+        <td>704.0</td>
+        <td></td>
+        <td>20386.0</td>
+        <td>32976.0</td>
+        <td>349064.0</td>
+        <td>77472.0</td>
+        <td>242681.0</td>
+        <td>28911.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2011</td>
+        <td>48427</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12859752.0</td>
+        <td>54523.0</td>
+        <td>781.0</td>
+        <td></td>
+        <td>20217.0</td>
+        <td>30495.0</td>
+        <td>344468.0</td>
+        <td>77719.0</td>
+        <td>237362.0</td>
+        <td>29387.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2012</td>
+        <td>49348</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12868192.0</td>
+        <td>53556.0</td>
+        <td>770.0</td>
+        <td></td>
+        <td>19480.0</td>
+        <td>29725.0</td>
+        <td>332706.0</td>
+        <td>71100.0</td>
+        <td>235314.0</td>
+        <td>26292.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2013</td>
+        <td>48653</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12890552.0</td>
+        <td>51956.0</td>
+        <td>722.0</td>
+        <td>5340.0</td>
+        <td>17733.0</td>
+        <td>28161.0</td>
+        <td>296048.0</td>
+        <td>59093.0</td>
+        <td>216059.0</td>
+        <td>20896.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2014</td>
+        <td>48278</td>
+        <td>False</td>
+        <td>True</td>
+        <td>12880580.0</td>
+        <td>47663.0</td>
+        <td>685.0</td>
+        <td>4159.0</td>
+        <td>15299.0</td>
+        <td>27520.0</td>
+        <td>267385.0</td>
+        <td>50008.0</td>
+        <td>199926.0</td>
+        <td>17451.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2015</td>
+        <td>46240</td>
+        <td>False</td>
+        <td>False</td>
+        <td>12859995.0</td>
+        <td>49354.0</td>
+        <td>744.0</td>
+        <td>4821.0</td>
+        <td>14910.0</td>
+        <td>28879.0</td>
+        <td>255729.0</td>
+        <td>46443.0</td>
+        <td>191634.0</td>
+        <td>17652.0</td>
+      </tr>
+      
+      <tr>
+        <td>ILLINOIS</td>
+        <td>False</td>
+        <td>2016</td>
+        <td>43616</td>
+        <td>False</td>
+        <td>False</td>
+        <td>12835726.0</td>
+        <td>56054.0</td>
+        <td>1061.0</td>
+        <td>5003.0</td>
+        <td>17829.0</td>
+        <td>32161.0</td>
+        <td>263256.0</td>
+        <td>48193.0</td>
+        <td>195196.0</td>
+        <td>19867.0</td>
+      </tr>
+      
+    </table>
+  </section>
+
+</body>
+
+</html>

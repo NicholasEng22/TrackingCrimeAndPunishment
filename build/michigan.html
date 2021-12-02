@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Crime and Punishment Datatable</title>
+    <meta name="author" content="You">
+    <meta name="description" content="Test">
+    <meta content="text/html" http-equiv="Content-type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Trinity School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Index</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="alabama.html">Alabma</a>
+              <a class="dropdown-item" href="alaska.html">Alaska</a>
+              <a class="dropdown-item" href="arizona.html">Arizona</a>
+              <a class="dropdown-item" href="arkansas.html">Arkanasa</a>
+              <a class="dropdown-item" href="california.html">California</a>
+              <a class="dropdown-item" href="colorado.html">Colorado</a>
+              <a class="dropdown-item" href="connecticut.html">Connecticut</a>
+              <a class="dropdown-item" href="delaware.html">Delaware</a>
+              <a class="dropdown-item" href="flordia.html">Florida</a>
+              <a class="dropdown-item" href="georgia.html">Georgia</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <h1>Test</h1>
+      <div class="starter-template">
+        <br>
+        <h1>Tracking Crime and Punishment</h1>
+        <p>This is a cool project.</p>
+      </div>
+      <img src="..\..\resources\UnitedStates.svg" alt="Map of the US">
+    </main>
+    <br>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Includes_jails</th>
+        <th>Year</th>
+        <th>Prisoner Count</th>
+        <th>Crime Reporting Change</th>
+        <th>Crimes Estimated</th>
+        <th>State Population</th>
+        <th>Violent Crime Total</th>
+        <th>Murder Manslaughter</th>
+        <th>Rape Revised</th>
+        <th>Robbery</th>
+        <th>Aggravated Assault</th>
+        <th>Property Crime Total</th>
+        <th>Burglary</th>
+        <th>Larceny</th>
+        <th>Vehicle Theft</th>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2001</td>
+        <td>48849</td>
+        <td>False</td>
+        <td>False</td>
+        <td>10006266.0</td>
+        <td>55424.0</td>
+        <td>672.0</td>
+        <td></td>
+        <td>12937.0</td>
+        <td>36551.0</td>
+        <td>352353.0</td>
+        <td>72038.0</td>
+        <td>226708.0</td>
+        <td>53607.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2002</td>
+        <td>50591</td>
+        <td>False</td>
+        <td>False</td>
+        <td>10043221.0</td>
+        <td>54306.0</td>
+        <td>678.0</td>
+        <td></td>
+        <td>11847.0</td>
+        <td>36417.0</td>
+        <td>335060.0</td>
+        <td>70970.0</td>
+        <td>214367.0</td>
+        <td>49723.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2003</td>
+        <td>49358</td>
+        <td>False</td>
+        <td>False</td>
+        <td>10082364.0</td>
+        <td>51550.0</td>
+        <td>612.0</td>
+        <td></td>
+        <td>11254.0</td>
+        <td>34214.0</td>
+        <td>330565.0</td>
+        <td>68316.0</td>
+        <td>208538.0</td>
+        <td>53711.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2004</td>
+        <td>48831</td>
+        <td>False</td>
+        <td>False</td>
+        <td>10104206.0</td>
+        <td>49737.0</td>
+        <td>643.0</td>
+        <td></td>
+        <td>11336.0</td>
+        <td>32276.0</td>
+        <td>309805.0</td>
+        <td>64233.0</td>
+        <td>194988.0</td>
+        <td>50584.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2005</td>
+        <td>49493</td>
+        <td>False</td>
+        <td>False</td>
+        <td>10100833.0</td>
+        <td>55936.0</td>
+        <td>629.0</td>
+        <td></td>
+        <td>13348.0</td>
+        <td>36760.0</td>
+        <td>312892.0</td>
+        <td>70527.0</td>
+        <td>194090.0</td>
+        <td>48275.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2006</td>
+        <td>51515</td>
+        <td>False</td>
+        <td>False</td>
+        <td>10095643.0</td>
+        <td>56981.0</td>
+        <td>721.0</td>
+        <td></td>
+        <td>14229.0</td>
+        <td>36684.0</td>
+        <td>325594.0</td>
+        <td>76313.0</td>
+        <td>199183.0</td>
+        <td>50098.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2007</td>
+        <td>50233</td>
+        <td>False</td>
+        <td>False</td>
+        <td>10071822.0</td>
+        <td>53765.0</td>
+        <td>661.0</td>
+        <td></td>
+        <td>13365.0</td>
+        <td>35147.0</td>
+        <td>308550.0</td>
+        <td>75273.0</td>
+        <td>191289.0</td>
+        <td>41988.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2008</td>
+        <td>48738</td>
+        <td>False</td>
+        <td>False</td>
+        <td>10003422.0</td>
+        <td>51512.0</td>
+        <td>554.0</td>
+        <td></td>
+        <td>13246.0</td>
+        <td>33205.0</td>
+        <td>295100.0</td>
+        <td>74787.0</td>
+        <td>184558.0</td>
+        <td>35755.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2009</td>
+        <td>45478</td>
+        <td>False</td>
+        <td>False</td>
+        <td>9969727.0</td>
+        <td>49825.0</td>
+        <td>623.0</td>
+        <td></td>
+        <td>12427.0</td>
+        <td>32251.0</td>
+        <td>284019.0</td>
+        <td>76046.0</td>
+        <td>178628.0</td>
+        <td>29345.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2010</td>
+        <td>44113</td>
+        <td>False</td>
+        <td>False</td>
+        <td>9877143.0</td>
+        <td>48693.0</td>
+        <td>580.0</td>
+        <td></td>
+        <td>11522.0</td>
+        <td>31858.0</td>
+        <td>271501.0</td>
+        <td>74345.0</td>
+        <td>169748.0</td>
+        <td>27408.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2011</td>
+        <td>42904</td>
+        <td>False</td>
+        <td>False</td>
+        <td>9876801.0</td>
+        <td>43731.0</td>
+        <td>617.0</td>
+        <td></td>
+        <td>10263.0</td>
+        <td>28507.0</td>
+        <td>251329.0</td>
+        <td>69755.0</td>
+        <td>156666.0</td>
+        <td>24908.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2012</td>
+        <td>43594</td>
+        <td>False</td>
+        <td>False</td>
+        <td>9882519.0</td>
+        <td>44962.0</td>
+        <td>701.0</td>
+        <td></td>
+        <td>10423.0</td>
+        <td>29203.0</td>
+        <td>249249.0</td>
+        <td>65560.0</td>
+        <td>158609.0</td>
+        <td>25080.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2013</td>
+        <td>43704</td>
+        <td>False</td>
+        <td>False</td>
+        <td>9898193.0</td>
+        <td>44757.0</td>
+        <td>625.0</td>
+        <td>6785.0</td>
+        <td>10093.0</td>
+        <td>27254.0</td>
+        <td>230135.0</td>
+        <td>56256.0</td>
+        <td>149794.0</td>
+        <td>24085.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2014</td>
+        <td>43359</td>
+        <td>False</td>
+        <td>False</td>
+        <td>9909877.0</td>
+        <td>42348.0</td>
+        <td>535.0</td>
+        <td>6273.0</td>
+        <td>8021.0</td>
+        <td>27519.0</td>
+        <td>202547.0</td>
+        <td>44184.0</td>
+        <td>137206.0</td>
+        <td>21157.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2015</td>
+        <td>42628</td>
+        <td>False</td>
+        <td>False</td>
+        <td>9922576.0</td>
+        <td>41231.0</td>
+        <td>571.0</td>
+        <td>6450.0</td>
+        <td>7796.0</td>
+        <td>26414.0</td>
+        <td>187101.0</td>
+        <td>40041.0</td>
+        <td>131296.0</td>
+        <td>15764.0</td>
+      </tr>
+      
+      <tr>
+        <td>MICHIGAN</td>
+        <td>False</td>
+        <td>2016</td>
+        <td>41122</td>
+        <td>False</td>
+        <td>False</td>
+        <td>9933445.0</td>
+        <td>45782.0</td>
+        <td>612.0</td>
+        <td>7268.0</td>
+        <td>7123.0</td>
+        <td>30779.0</td>
+        <td>190249.0</td>
+        <td>39738.0</td>
+        <td>130249.0</td>
+        <td>20262.0</td>
+      </tr>
+      
+    </table>
+  </section>
+
+</body>
+
+</html>

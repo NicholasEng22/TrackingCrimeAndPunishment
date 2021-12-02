@@ -17,17 +17,17 @@
       </li>
       <li class="nav-item">
         <!-- We've gotta implement some sort of system that differentiates between whether we're in or out of the states folder-->
-        <a class="nav-link" href="../../build/about.html">About</a>
+        <a class="nav-link" href="about.html">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../../build/index.html">Index</a>
+        <a class="nav-link" href="index.html">Index</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">States</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
 
           <% for(let i=2; i<data.length; i++){ %>
-            <a class="dropdown-item" href="states/<%=data[i].jurisdiction.toLowerCase()%>.html"> <%=data[i].jurisdiction.toLowerCase()%></a>
+            <a class="dropdown-item" href=<%=data[i].jurisdiction.toLowerCase()%>.html> <%=data[i].jurisdiction.toLowerCase()%></a>
           <%}%>
         </div>
       </li>
