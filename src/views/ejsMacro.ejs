@@ -2,31 +2,17 @@
 <html lang="en">
   <head>
     <%- include ('global/partials/header');  %>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Crime and Punishment Datatable</title>
-    <meta name="author" content="You">
-    <meta name="description" content="Test">
-    <meta content="text/html" http-equiv="Content-type" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-
-    <!-- Load plotly.js into the DOM -->
-  	<script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
-  	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
-
   </head>
   <body>
     <%- include ('global/partials/navbar');  %>
 
+    <br> <br>
     <br>
     <h1>Tracking Crime and Punishment</h1>
     <p>This is a cool project.</p>
     <br>
+
+    <div id='mapDiv' style="width:1200px;height:600px;margin:auto;"><!-- Plotly chart will be drawn inside this DIV --></div>
 
     <div class = "userSelection">
   		<h2>User selections: </h2>
@@ -68,6 +54,7 @@
   			<option value="total_crime_per_capita_per_one_hundred_thousand">Total Crime Per Capita</option>
   			<!-- <option value="state_population">State Population</option> Must remove FED from state population -->
   		</select>
+    </div>
 
   <%- include ('global/partials/footer');  %>
 </body>
