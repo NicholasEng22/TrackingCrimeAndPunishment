@@ -13,10 +13,10 @@
   "scripts": {
     "prebuild": "node src/setup.js",
     "build": "node src/ejs_macro.js && node src/ejs_micro.js",
-    "postbuild": "open http://localhost:3000 && node server.js",
+    "postbuild": "open http://localhost:3000 && node server.js && clear && clear",
     "prebuildNick": "node src/setup.js",
     "buildNick": "node src/ejs_macro.js && node src/ejs_micro.js",
-    "postbuildNick": "start http://localhost:3000 && node server.js"
+    "postbuildNick": "start http://localhost:3000 && node server.js && clear && clear"
   },
   "repository": {
     "type": "git",
