@@ -1,5 +1,5 @@
 let d3Data = [];
-let csv_url = "crime_and_incarceration_by_state_data.csvV2.csv"; //"../resources/crime_and_incarceration_by_state_data.csv"
+let csv_url = "/src/crime_and_incarceration_by_state_data.csvV2.csv"; //"../resources/crime_and_incarceration_by_state_data.csv"
 //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csvV2.csv
 
 function generateMap() {
@@ -11,7 +11,7 @@ function generateMap() {
     let yearSelect = document.querySelector("#year-select").value;
 
     let rowsData = d3Data.filter(function(row) {
-      return yearSelect === "2001-2016" || yearSelect == row['year'];
+      return (yearSelect === "2001-2016" || yearSelect == row['year']) && row['code'] != 'FED';
     });
 
     let min = rowsData.reduce(function(prev, current) {
@@ -22,8 +22,8 @@ function generateMap() {
       return parseInt(prev[crimeSelect.value]) >= parseInt(current[crimeSelect.value]) ? prev : current;
     });
 
-    min = min[crimeSelect.value];
-    max = max[crimeSelect.value];
+    min = parseInt(min[crimeSelect.value]);
+    max = parseInt(max[crimeSelect.value]);
 
     var data = [{
         type: 'choropleth',
@@ -65,7 +65,7 @@ function generateMap() {
 
 function microCrimePieChart(){
   let yearSelect = document.querySelector("#year-select").value;
-  let stateSelect = document.querySelector("#state-select").value;
+  let stateSelect = document.querySelector("#selectedMicroState").value;
   let stateData = d3Data.filter(function(row) {
     return ((yearSelect === "2001-2016" && row['year'] == "2016") || yearSelect == row['year']) && row['code'] == stateSelect;
   });
@@ -137,7 +137,7 @@ function generateBar(){
   Plotly.newPlot('bar', data, layout);
 }
 
-function generateStateCrimeBarGraphMacro(){
+function generateLineBarMacro(){
   let crimeSelect = document.querySelector("#crime-select").value;
   let crimeData = d3Data.reduce(function(prev, curr) {
     if(prev[curr.code] == null) {
@@ -169,9 +169,9 @@ function generateStateCrimeBarGraphMacro(){
   Plotly.newPlot('lineBarMacro', plotData, layout);
 }
 
-function generateStateCrimeBarGraphMicro(){
+function generateLineBarMicro(){
   let crimeSelect = document.querySelector("#crime-select").value;
-  let stateSelect = document.querySelector("#state-select").value;
+  let stateSelect = document.querySelector("#selectedMicroState").value;
   let crimeData = d3Data.reduce(function(prev, curr) {
     if(prev[curr.code] == null) {
       prev[curr.code] = {
@@ -260,28 +260,58 @@ function dataTable(){
 
 }
 
-function generatePlots() {
+function generateMacroPlots() {
+  console.log("marco");
+
   if(d3Data.length === 0 ) {
     d3.csv(csv_url, function(err, rows){
+      // console.log(rows);
+      // console.log(csv_url);
       d3Data = rows;
       generateMap();
       // microCrimePieChart();
-      // macroCrimePieChart();
-      // generateBar();
-      // generateStateCrimeBarGraphMacro();
-      // generateStateCrimeBarGraphMicro();
-      // dataTable();
+      macroCrimePieChart();
+      //generateBar();
+      generateLineBarMacro();
+      // generateLineBarMicro();
+      dataTable();
     });
   } else {
     generateMap();
     // microCrimePieChart();
-    // macroCrimePieChart();
-    // generateBar();
-    // generateStateCrimeBarGraphMacro();
-    // generateStateCrimeBarGraphMicro();
-    // dataTable();
+    macroCrimePieChart();
+    //generateBar();
+    generateLineBarMacro();
+    // generateLineBarMicro();
+    dataTable();
   }
 }
 
-generatePlots();
+function generateMicroPlots() {
+  console.log("micro");
+  if(d3Data.length === 0 ) {
+    d3.csv(csv_url, function(err, rows){
+      // console.log(rows);
+      // console.log(csv_url);
+      d3Data = rows;
+      generateMap();
+      microCrimePieChart();
+      // macroCrimePieChart();
+      generateBar();
+      // generateLineBarMacro();
+      generateLineBarMicro();
+      dataTable();
+    });
+  } else {
+    generateMap();
+    microCrimePieChart();
+    // macroCrimePieChart();
+    generateBar();
+    // generateLineBarMacro();
+    generateLineBarMicro();
+    dataTable();
+  }
+}
+
+// generatePlots();
 console.log("Hi there");

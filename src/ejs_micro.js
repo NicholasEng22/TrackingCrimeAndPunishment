@@ -8,22 +8,65 @@ let stateJSON = JSON.parse(state_info);
 
 
 let stateArray = ["ALABAMA", "ALASKA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "FLORIDA", "GEORGIA", "HAWAII", "IDAHO", "ILLINOIS", "INDIANA", "IOWA", "KANSAS", "TEXAS", "LOUISANA", "MAINE", "MARYLAND", "MASSACHUSETTS", "MICHIGAN"];
+let stateObj = {
+          AZ:'Arizona',
+          AL:'Alabama',
+          AK:'Alaska',
+        AR:'Arkansas',
+        CA:'California',
+        CO:'Colorado',
+         CT:'Connecticut',
+         DE:'Delaware',
+         FL:'Florida',
+        GA:'Georgia',
+         HI:'Hawaii',
+         ID:'Idaho',
+         IL:'Illinois',
+         IN:'Indiana',
+        IA:'Iowa',
+         KS:'Kansas',
+        KY:'Kentucky',
+         LA:'Louisiana',
+         ME:'Maine',
+         MD:'Maryland',
+         MA:'Massachusetts',
+         MI:'Michigan',
+         MN:'Minnesota',
+         MS:'Mississippi',
+         MO:'Missouri',
+         MT:'Montana',
+        NE:'Nebraska',
+         NV:'Nevada',
+         NH:'New Hampshire',
+         NJ:'New Jersey',
+         NM:'New Mexico',
+         NY:'New York',
+         NC:'North Carolina',
+         ND:'North Dakota',
+         OH:'Ohio',
+         OK:'Oklahoma',
+         OR:'Oregon',
+        PA:'Pennsylvania',
+         RI:'Rhode Island',
+         SC:'South Carolina',
+         SD:'South Dakota',
+         TN:'Tennessee',
+         TX:'Texas',
+         UT:'Utah',
+         VT:'Vermont',
+         VA:'Virginia',
+         WA:'Washington',
+         WV:'West Virginia',
+         WI:'Wisconsin',
+         WY:'Wyoming'}
 
-
-for (let i = 0; i < stateArray.length; i++) {
-  let microSummaryTable = [];
-
-  stateJSON.forEach(function(state) {
-    if ((state["jurisdiction"] == "jurisdiction") || (state["jurisdiction"] == stateArray[i])) {
-      microSummaryTable.push(state);
-    }
-  });
-
-  let stateName = stateArray[i].toLowerCase();
+for (const state_abbrev in stateObj) {
+  let stateName = stateObj[state_abbrev].toLowerCase();
 
   let index_html = ejs.render(index_template, {
     filename: __dirname + '/views/ejsMicro.ejs',
-    data: microSummaryTable
+    state: state_abbrev,
+    data: Object.values(stateObj).map((state) => {return {jurisdiction: state}})
   });
 
   fs.writeFileSync(("build/" + stateName + ".html"), index_html, 'utf8');
