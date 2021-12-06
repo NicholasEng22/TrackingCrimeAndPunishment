@@ -12,7 +12,7 @@
   },
   "scripts": {
     "prebuild": "node src/setup.js",
-    "build": "node src/ejs_macro.js && node src/ejs_micro.js",
+    "build": "node src/ejs_macro.js && node src/ejs_micro.js && cp -r img build",
     "postbuild": "open http://localhost:3000 && node server.js && clear && clear",
     "prebuildNick": "node src/setup.js",
     "buildNick": "node src/ejs_macro.js && node src/ejs_micro.js",
