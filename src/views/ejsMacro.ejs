@@ -6,6 +6,7 @@
   <body>
     <%- include ('global/partials/navbar');  %>
 
+    <main role="main" class="container">
     <br> <br>
     <br>
     <h1>Tracking Crime and Punishment</h1>
@@ -14,8 +15,9 @@
 
     <div id='mapDiv' style="width:1200px;height:600px;margin:auto;"><!-- Plotly chart will be drawn inside this DIV --></div>
 
+    <h2>User Selections: </h2>
     <div class = "userSelection">
-      <h2>User selections: </h2>
+      <br>
       <label for="year-select">Year:</label>
       <select name="Years" id="year-select" onchange="generateMacroPlots()">
         <option value="2001-2016">2001-2016</option>
@@ -58,13 +60,15 @@
 
 
     <h2>Graphs:</h2>
-  	<div id='macroCrimePieChart' class='graph' style="width:1200px;height:600px;"> </div>
+  	<div id='macroCrimePieChart' class='graph'> </div>
   	<br>
   	<div id='lineBarMacro' class='graph' style="width:1200px;height:600px;"> </div>
   	<br>
   	<div id='table' class='graph' style="width:1200px;height:600px;"> </div>
 
+    </main>
   <%- include ('global/partials/footer');  %>
+
 </body>
 <script src='/src/plotlyGenerator.js'></script>
 <script>generateMacroPlots()</script>
