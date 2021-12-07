@@ -6,8 +6,68 @@ let index_template = fs.readFileSync(__dirname +'/views/ejsMicro.ejs', 'utf8');
 
 let stateJSON = JSON.parse(state_info);
 
+let northeast = [
+  'Connecticut',
+  'Maine',
+  'Massachusetts',
+  'New Hampshire',
+  'Rhode Island',
+  'Vermont',
+  'New Jersey',
+  'New York',
+  'Pennsylvania'
+];
 
-let stateArray = ["ALABAMA", "ALASKA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "FLORIDA", "GEORGIA", "HAWAII", "IDAHO", "ILLINOIS", "INDIANA", "IOWA", "KANSAS", "TEXAS", "LOUISANA", "MAINE", "MARYLAND", "MASSACHUSETTS", "MICHIGAN"];
+let midwest = [
+  'Illinois',
+  'Indiana',
+  'Michigan',
+  'Ohio',
+  'Wisconsin',
+  'Iowa',
+  'Kansas',
+  'Minnesota',
+  'Missouri',
+  'Nebraska',
+  'North Dakota',
+  'South Dakota'
+];
+
+let south = [
+  'Delaware',
+  'Florida',
+  'Georgia',
+  'Maryland',
+  'North Carolina',
+  'South Carolina',
+  'Virginia',
+  'West Virginia',
+  'Alabama',
+  'Kentucky',
+  'Mississippi',
+  'Tennessee',
+  'Arkansas',
+  'Louisiana',
+  'Oklahoma',
+  'Texas'
+];
+
+let west = [
+  'Arizona',
+  'Colorado',
+  'Idaho',
+  'Montana',
+  'Nevada',
+  'New Mexico',
+  'Utah',
+  'Wyoming',
+  'Alaska',
+  'California',
+  'Hawaii',
+  'Oregon',
+  'Washington'
+];
+
 let stateObj = {
           AZ:'Arizona',
           AL:'Alabama',
@@ -58,7 +118,7 @@ let stateObj = {
          WA:'Washington',
          WV:'West Virginia',
          WI:'Wisconsin',
-         WY:'Wyoming'}
+         WY:'Wyoming'};
 
 for (const state_abbrev in stateObj) {
   let stateName = stateObj[state_abbrev].toLowerCase();
@@ -66,7 +126,11 @@ for (const state_abbrev in stateObj) {
   let index_html = ejs.render(index_template, {
     filename: __dirname + '/views/ejsMicro.ejs',
     state: state_abbrev,
-    data: Object.values(stateObj).map((state) => {return {jurisdiction: state}})
+    data: Object.values(stateObj).map((state) => {return {jurisdiction: state}}),
+    northeast: northeast,
+    south: south,
+    midwest: midwest,
+    west: west
   });
 
   fs.writeFileSync(("build/" + stateName + ".html"), index_html, 'utf8');

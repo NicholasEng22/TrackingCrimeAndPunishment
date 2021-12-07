@@ -28,5 +28,14 @@
           <%}%>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Northeast</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+
+          <% for(let i=2; i<northeast.length; i++){ %>
+            <a class="dropdown-item" href="<%=northeast[i].toLowerCase()%>.html"><%=northeast[i]%></a>
+          <%}%>
+        </div>
+      </li>
   </div>
 </nav>
