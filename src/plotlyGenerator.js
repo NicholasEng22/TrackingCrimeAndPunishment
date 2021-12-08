@@ -121,11 +121,20 @@ function macroCrimePieChart(){
 }
 
 function generateBar(){
+let yearSelect = document.querySelector("#year-select").value;
 let stateSelect = document.querySelector("#selectedMicroState").value;
+let stateData = d3Data.filter(function(row) {
+  return ((yearSelect === "2001-2016" && row['year'] == "2016") || yearSelect == row['year']) && row['code'] == stateSelect;
+});
+let fedData = d3Data.filter(function(row) {
+  return ((yearSelect === "2001-2016" && row['year'] == "2016") || yearSelect == row['year']) && row['code'] == 'FED';
+});
+
+
   var data = [
     {
-      x: ['State', 'Federal'],
-      y: [60000, 800000],
+      x: [stateSelect, 'Federal'],
+      y: [(stateData[0].violent_crime_total + stateData[0].property_crime_total),, (fedData[0].violent_crime_total + fedData[0].property_crime_total)],
       type: 'bar'
     }
   ];
