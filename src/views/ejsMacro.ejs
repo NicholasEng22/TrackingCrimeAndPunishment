@@ -9,37 +9,37 @@
     <main role="main" class="container">
     <br> <br>
     <br>
-    <h1>Tracking Crime and Punishment</h1>
-    <p>This is a cool project.</p>
+    <h1>Tracking Crime and Punishment - Federal Data</h1>
     <br>
 
     <div id='mapDiv' style="width:1200px;height:600px;margin:auto;"><!-- Plotly chart will be drawn inside this DIV --></div>
 
-    <h2>User Selections: </h2>
-    <div class = "userSelection">
-      <br>
-      <label for="year-select">Year:</label>
-      <select name="Years" id="year-select" onchange="generateMacroPlots()">
-        <option value="2001-2016">2001-2016</option>
-        <option value="2001">2001</option>
-        <option value="2002">2002</option>
-        <option value="2003">2003</option>
-        <option value="2004">2004</option>
-        <option value="2005">2005</option>
-        <option value="2006">2006</option>
-        <option value="2007">2007</option>
-        <option value="2008">2008</option>
-        <option value="2009">2009</option>
-        <option value="2010">2010</option>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-        <option value="2015">2015</option>
-        <option value="2016">2016</option>
-      </select>
+    <div class = "container">
+      <h2>User Selections: </h2>
+      <div class = "userSelection">
+        <br>
+        <label for="year-select">Year:</label>
+        <select name="Years" id="year-select" onchange="generateMacroPlots()">
+          <option value="2001-2016">2001-2016</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+        </select>
 
-      <br> <br>
+        <br> <br>
 
       <label for="crime-select">Attribute/Crime:</label>
       <select name="Types of Crime" id="crime-select" onchange="generateMacroPlots()">
@@ -65,14 +65,15 @@
       into how crime is viewed and regulated in a given state. We created a webpage that allows you to view a wide variety of crime metrics across the entire nation
       as well as in specific states in order to make information about the crime distribution across the nation more readable and accessible.</p>
 
-    <h3>Graphs:</h3>
-  	<div id='macroCrimePieChart' class='graph'> </div>
-  	<br>
-  	<div id='lineBarMacro' class='graph' style="width:1200px;height:600px;"> </div>
-  	<br>
-  	<div id='table' class='graph' style="width:1200px;height:600px;"> </div>
+      <h3>Graphs:</h3>
+    	<div id='macroCrimePieChart' class='graph'> </div>
+    	<br>
+    	<div id='lineBarMacro' class='graph' style="width:1200px;height:600px;"> </div>
+    	<br>
+    	<div id='table' class='graph' style="width:1200px;height:600px;"> </div>
+    </div>
 
-    </main>
+      </main>
   <%- include ('global/partials/footer');  %>
 
 </body>
