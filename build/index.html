@@ -9,7 +9,7 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<title>Crime and Punishment Datatable</title>
+<title>Tracking Crime and Punishment</title>
 <meta name="author" content="You">
 <meta name="description" content="Test">
 <meta content="text/html" http-equiv="Content-type" />
@@ -27,12 +27,6 @@
   }
 
   .userSelection {
-    border: 5px outset black;
-    margin: 10px;
-    padding-left: 80px;
-  }
-
-  .graph {
     border: 5px outset black;
     margin: 10px;
     padding-left: 80px;
@@ -172,7 +166,6 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Northeast</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-
           
             <a class="dropdown-item" href="massachusetts.html">Massachusetts</a>
           
@@ -190,6 +183,94 @@
           
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Midwest</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          
+            <a class="dropdown-item" href="michigan.html">Michigan</a>
+          
+            <a class="dropdown-item" href="ohio.html">Ohio</a>
+          
+            <a class="dropdown-item" href="wisconsin.html">Wisconsin</a>
+          
+            <a class="dropdown-item" href="iowa.html">Iowa</a>
+          
+            <a class="dropdown-item" href="kansas.html">Kansas</a>
+          
+            <a class="dropdown-item" href="minnesota.html">Minnesota</a>
+          
+            <a class="dropdown-item" href="missouri.html">Missouri</a>
+          
+            <a class="dropdown-item" href="nebraska.html">Nebraska</a>
+          
+            <a class="dropdown-item" href="north dakota.html">North Dakota</a>
+          
+            <a class="dropdown-item" href="south dakota.html">South Dakota</a>
+          
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">South</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          
+            <a class="dropdown-item" href="georgia.html">Georgia</a>
+          
+            <a class="dropdown-item" href="maryland.html">Maryland</a>
+          
+            <a class="dropdown-item" href="north carolina.html">North Carolina</a>
+          
+            <a class="dropdown-item" href="south carolina.html">South Carolina</a>
+          
+            <a class="dropdown-item" href="virginia.html">Virginia</a>
+          
+            <a class="dropdown-item" href="west virginia.html">West Virginia</a>
+          
+            <a class="dropdown-item" href="alabama.html">Alabama</a>
+          
+            <a class="dropdown-item" href="kentucky.html">Kentucky</a>
+          
+            <a class="dropdown-item" href="mississippi.html">Mississippi</a>
+          
+            <a class="dropdown-item" href="tennessee.html">Tennessee</a>
+          
+            <a class="dropdown-item" href="arkansas.html">Arkansas</a>
+          
+            <a class="dropdown-item" href="louisiana.html">Louisiana</a>
+          
+            <a class="dropdown-item" href="oklahoma.html">Oklahoma</a>
+          
+            <a class="dropdown-item" href="texas.html">Texas</a>
+          
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">West</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          
+            <a class="dropdown-item" href="idaho.html">Idaho</a>
+          
+            <a class="dropdown-item" href="montana.html">Montana</a>
+          
+            <a class="dropdown-item" href="nevada.html">Nevada</a>
+          
+            <a class="dropdown-item" href="new mexico.html">New Mexico</a>
+          
+            <a class="dropdown-item" href="utah.html">Utah</a>
+          
+            <a class="dropdown-item" href="wyoming.html">Wyoming</a>
+          
+            <a class="dropdown-item" href="alaska.html">Alaska</a>
+          
+            <a class="dropdown-item" href="california.html">California</a>
+          
+            <a class="dropdown-item" href="hawaii.html">Hawaii</a>
+          
+            <a class="dropdown-item" href="oregon.html">Oregon</a>
+          
+            <a class="dropdown-item" href="washington.html">Washington</a>
+          
+        </div>
+      </li>
   </div>
 </nav>
 
@@ -197,66 +278,70 @@
     <main role="main" class="container">
     <br> <br>
     <br>
-    <h1>Tracking Crime and Punishment</h1>
-    <p>This is a cool project.</p>
+    <h1>Tracking Crime and Punishment - Federal Data</h1>
     <br>
 
     <div id='mapDiv' style="width:1200px;height:600px;margin:auto;"><!-- Plotly chart will be drawn inside this DIV --></div>
 
-    <h2>User Selections: </h2>
-    <div class = "userSelection">
-      <br>
-      <label for="year-select">Year:</label>
-      <select name="Years" id="year-select" onchange="generateMacroPlots()">
-        <option value="2001-2016">2001-2016</option>
-        <option value="2001">2001</option>
-        <option value="2002">2002</option>
-        <option value="2003">2003</option>
-        <option value="2004">2004</option>
-        <option value="2005">2005</option>
-        <option value="2006">2006</option>
-        <option value="2007">2007</option>
-        <option value="2008">2008</option>
-        <option value="2009">2009</option>
-        <option value="2010">2010</option>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-        <option value="2015">2015</option>
-        <option value="2016">2016</option>
-      </select>
+    <div class = "container">
+      <h2>User Selections: </h2>
+      <div class = "userSelection">
+        <br>
+        <label for="year-select">Year:</label>
+        <select name="Years" id="year-select" onchange="generateMacroPlots()">
+          <option value="2001-2016">2001-2016</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+        </select>
 
-      <br> <br>
+        <br> <br>
 
-      <label for="crime-select">Attribute/Crime:</label>
-      <select name="Types of Crime" id="crime-select" onchange="generateMacroPlots()">
-        <option value="prisoners_per_capita_per_one_hundred_thousand">Prisoner Count Per Capita</option>
-        <option value="violent_crime_total">Violent Crime</option>
-        <option value="murder_manslaughter_per_capita_per_one_hundred_thousand">Murders/Manslaughter Per Capita</option>
-        <option value="rape_legacy_per_capita_per_one_hundred_thousand">Rape Legacy Per Capita</option>
-        <option value="robbery_per_capita_per_one_hundred_thousand">Robbery Per Capita</option>
-        <option value="agg_assault_per_capita_per_one_hundred_thousand">Aggrevated Assault Per Capita</option>
-        <option value="property_crime_total">Property Crime</option>
-        <option value="burglary_per_capita_per_one_hundred_thousand">Burglary Per Capita</option>
-        <option value="larceny_per_capita_per_one_hundred_thousand">Larceny Per Capita</option>
-        <option value="vehicle_theft_per_capita_per_one_hundred_thousand">Vehicle Theft Per Capita</option>
-        <option value="total_crime_per_capita_per_one_hundred_thousand">Total Crime Per Capita</option>
-        <!-- <option value="state_population">State Population</option> Must remove FED from state population -->
-      </select>
+        <label for="crime-select">Attribute/Crime:</label>
+        <select name="Types of Crime" id="crime-select" onchange="generateMacroPlots()">
+          <option value="prisoners_per_capita_per_one_hundred_thousand">Prisoner Count Per Capita</option>
+          <option value="violent_crime_total">Violent Crime</option>
+          <option value="murder_manslaughter_per_capita_per_one_hundred_thousand">Murders/Manslaughter Per Capita</option>
+          <option value="rape_legacy_per_capita_per_one_hundred_thousand">Rape Legacy Per Capita</option>
+          <option value="robbery_per_capita_per_one_hundred_thousand">Robbery Per Capita</option>
+          <option value="agg_assault_per_capita_per_one_hundred_thousand">Aggrevated Assault Per Capita</option>
+          <option value="property_crime_total">Property Crime</option>
+          <option value="burglary_per_capita_per_one_hundred_thousand">Burglary Per Capita</option>
+          <option value="larceny_per_capita_per_one_hundred_thousand">Larceny Per Capita</option>
+          <option value="vehicle_theft_per_capita_per_one_hundred_thousand">Vehicle Theft Per Capita</option>
+          <option value="total_crime_per_capita_per_one_hundred_thousand">Total Crime Per Capita</option>
+          <!-- <option value="state_population">State Population</option> Must remove FED from state population -->
+        </select>
+      </div>
+
+      <h2>Summary:</h2>
+      <p>Nick and I were interested in learning more about the architecture of the American prison system.
+        After finding a JSON file with a plethora of data on Kaggle, we have created this page to display a visual representation of that data.
+        Statistics such as how many crimes are committed, what types of crimes are committed, and how many prisoners there are.
+      </p>
+
+      <h3>Graphs:</h3>
+    	<div id='macroCrimePieChart' class='graph'> </div>
+    	<br>
+    	<div id='lineBarMacro' class='graph' style="width:1200px;height:600px;"> </div>
+    	<br>
+    	<div id='table' class='graph' style="width:1200px;height:600px;"> </div>
     </div>
 
-    <h2>Summary:</h2>
-
-
-    <h3>Graphs:</h3>
-  	<div id='macroCrimePieChart' class='graph'> </div>
-  	<br>
-  	<div id='lineBarMacro' class='graph' style="width:1200px;height:600px;"> </div>
-  	<br>
-  	<div id='table' class='graph' style="width:1200px;height:600px;"> </div>
-
-    </main>
+      </main>
   <footer>
 We used data from Kaggle to determine trends across the past 15 years of how and where crime is committed. Data from <a href="https://www.kaggle.com/christophercorrea/prisoners-and-crime-in-united-states"> Kaggle - Crime and Incarceration in the United States</a>
 </footer>

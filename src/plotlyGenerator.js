@@ -121,7 +121,7 @@ function macroCrimePieChart(){
 }
 
 function generateBar(){
-
+let stateSelect = document.querySelector("#selectedMicroState").value;
   var data = [
     {
       x: ['State', 'Federal'],
@@ -131,7 +131,7 @@ function generateBar(){
   ];
 
   var layout = {
-    title: 'Crime in State vs. the US',
+    title: 'Crime in ' + stateSelect + ' vs. the US',
   };
 
   Plotly.newPlot('bar', data, layout);
