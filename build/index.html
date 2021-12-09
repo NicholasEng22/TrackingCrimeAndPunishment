@@ -311,7 +311,7 @@
       <p>
         We explored the incarcerated population and the types of crimes (violent crime and property crime) committed in each state to gain an understanding of the crime trend over time on a state and federal level. The map depicts incarcerated population by each state. The buttons below allow you to select different options such as types of crime per capita and total property crimes committed as well as selecting data from a specific year. Please note that New York is missing crime data for 2015 which affects the federal averages and aggregates and the data for rape legacy is missing for 2016.
         <ul>
-          <li>Interesting Fact #1: We found it interesting that California had one of the largest incarcerated populations but this is probably due to California's large state population.</li>
+          <li>California has one the largest population incarcerated populations but maintains a relatively mediocre prisoner count per capita. After some investigation, the we discovered that California has a low incarceration rate compared to the national average. This suggests that the number of crimes in a state is proportional to the size of the state population.</li>
           <li>Interesting Fact #2</li>
           <li>Interesting Fact #3</li>
         </ul>
@@ -351,6 +351,7 @@
       <select name="Types of Crime" id="crime-select" onchange="generateMacroPlots()">
         <option value="prisoner_count">Prisoner Count</option>
         <option value="prisoners_per_capita_per_one_hundred_thousand">Prisoner Count Per Capita</option>
+        <option value="state_population">State Population</option>
         <option value="violent_crime_total">Violent Crime</option>
         <option value="murder_manslaughter_per_capita_per_one_hundred_thousand">Murders/Manslaughter Per Capita</option>
         <option value="rape_legacy_per_capita_per_one_hundred_thousand">Rape Legacy Per Capita</option>
