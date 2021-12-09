@@ -13,6 +13,26 @@
     <br>
 
     <div class = "container">
+      <h2>Summary:</h2>
+      <p>
+        We were interested in learning more about the architecture of the American prison system.
+        After finding a JSON file with a plethora of data on Kaggle, we have created this page to display a visual representation of that data.
+        Statistics such as how many crimes are committed, what types of crimes are committed, and how many prisoners there are, all give insight
+        into how crime is viewed and regulated in a given state. We created a webpage that allows you to view a wide variety of crime metrics across the entire nation
+        as well as in specific states in order to make information about the crime distribution across the nation more readable and accessible.
+      </p>
+
+      <h2>Comparison:</h2>
+      <p>
+        We explored the incarcerated population and the types of crimes (violent crime and property crime) committed in each state to gain an understanding of the crime trend over time on a state and federal level. The map depicts incarcerated population by each state. The buttons below allow you to select different options such as types of crime per capita and total property crimes committed as well as selecting data from a specific year. Please note that New York is missing crime data for 2015 which affects the federal averages and aggregates and the data for rape legacy is missing for 2016.
+        <ul>
+          <li>Interesting Fact #1: We found it interesting that California had one of the largest incarcerated populations but this is probably due to California's large state population.</li>
+          <li>Interesting Fact #2</li>
+          <li>Interesting Fact #3</li>
+        </ul>
+      </p>
+
+
     <div id='mapDiv' style="width:1200px;height:600px;margin:auto;"><!-- Plotly chart will be drawn inside this DIV --></div>
 
 
@@ -44,6 +64,7 @@
 
       <label for="crime-select">Attribute/Crime:</label>
       <select name="Types of Crime" id="crime-select" onchange="generateMacroPlots()">
+        <option value="prisoner_count">Prisoner Count</option>
         <option value="prisoners_per_capita_per_one_hundred_thousand">Prisoner Count Per Capita</option>
         <option value="violent_crime_total">Violent Crime</option>
         <option value="murder_manslaughter_per_capita_per_one_hundred_thousand">Murders/Manslaughter Per Capita</option>
@@ -58,24 +79,6 @@
         <!-- <option value="state_population">State Population</option> Must remove FED from state population -->
       </select>
     </div>
-
-    <h2>Summary:</h2>
-    <p>
-      We were interested in learning more about the architecture of the American prison system.
-      After finding a JSON file with a plethora of data on Kaggle, we have created this page to display a visual representation of that data.
-      Statistics such as how many crimes are committed, what types of crimes are committed, and how many prisoners there are, all give insight
-      into how crime is viewed and regulated in a given state. We created a webpage that allows you to view a wide variety of crime metrics across the entire nation
-      as well as in specific states in order to make information about the crime distribution across the nation more readable and accessible.
-    </p>
-
-    <h2>Comparison:</h2>
-    <p>
-      The United States has a total population of 3500000000 people. From 2001-2016, the total crime (property crime and violent crime) amounted to 13173233.
-      The United States has a crime per capita metric of 20317 crimes per 100,000 people.
-      The United States crime per capita is BELOW AVERAGE with the US crime per capita being X.
-      The number of crimes committed in NY is x% of the US total crime (property and violent crime total)
-    </p>
-
       <h3>Graphs:</h3>
     	<div id='macroCrimePieChart' class='graph'> </div>
     	<br>
