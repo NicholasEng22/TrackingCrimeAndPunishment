@@ -2,6 +2,26 @@ let d3Data = [];
 let csv_url = "/src/crime_and_incarceration_by_state_data.csvV2.csv"; //"../resources/crime_and_incarceration_by_state_data.csv"
 //"https://raw.githubusercontent.com/NicholasEng22/TrackingCrimeAndPunishment/main/resources/crime_and_incarceration_by_state_data.csvV2.csv
 
+function fillText() {
+    let stateSelect = document.querySelector("#selectedMicroState").value;
+  // 2016 state population
+  let state_data_2016 = d3Data.find(function (row) { return row['year'] == '2016' && row['code'] == stateSelect; });
+  let fed_data_2016 = d3Data.find(function (row) { return row['year'] == '2016' && row['code'] == 'FED'; });
+  let all_state_data_2016 = d3Data.filter(function (row) { return row['year'] == '2016'; });
+  document.querySelector("#state_pop").innerText = state_data_2016['state_population'];
+  document.querySelector("#state_crime").innerText = state_data_2016['total_crime_per_capita_per_one_hundred_thousand'];
+  document.querySelector("#us_crime").innerText = fed_data_2016['total_crime_per_capita_per_one_hundred_thousand'];
+  document.querySelector("#avg_text").innerText = state_data_2016['total_crime_per_capita_per_one_hundred_thousand'] > fed_data_2016['total_crime_per_capita_per_one_hundred_thousand'] ? "ABOVE" : "BELOW";
+  let percent_total_crime = parseFloat(state_data_2016['total_crime']) / parseFloat(fed_data_2016['total_crime']) * 100;
+  document.querySelector("#percent_text").innerText = percent_total_crime.toFixed(2);
+  document.querySelector("#state_total_crime").innerText = state_data_2016['total_crime'];
+
+  //US total_crime_per_capita_per_one_hundred_thousand in 2016 - 2842.55
+
+
+
+}
+
 function generateMap() {
     function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
@@ -28,9 +48,9 @@ function generateMap() {
     var data = [{
         type: 'choropleth',
         locationmode: 'USA-states',
-        locations: unpack(d3Data, 'code'),
-        z: unpack(d3Data, crimeSelect.value),
-        text: unpack(d3Data, 'jurisdiction'),
+        locations: unpack(rowsData, 'code'),
+        z: unpack(rowsData, crimeSelect.value),
+        text: unpack(rowsData, 'jurisdiction'),
         zmin: min,
         zmax: max,
         colorscale: [
@@ -134,7 +154,7 @@ let fedData = d3Data.filter(function(row) {
   var data = [
     {
       x: [stateSelect, 'Federal'],
-      y: [(stateData[0].violent_crime_total + stateData[0].property_crime_total),, (fedData[0].violent_crime_total + fedData[0].property_crime_total)],
+      y: [(stateData[0].violent_crime_total + stateData[0].property_crime_total), (fedData[0].violent_crime_total + fedData[0].property_crime_total)],
       type: 'bar'
     }
   ];
@@ -310,6 +330,7 @@ function generateMicroPlots() {
       // generateLineBarMacro();
       generateLineBarMicro();
       dataTable();
+      fillText();
     });
   } else {
     generateMap();
@@ -319,6 +340,7 @@ function generateMicroPlots() {
     // generateLineBarMacro();
     generateLineBarMicro();
     dataTable();
+    fillText();
   }
 }
 

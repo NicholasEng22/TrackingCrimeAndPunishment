@@ -126,6 +126,7 @@ for (const state_abbrev in stateObj) {
   let index_html = ejs.render(index_template, {
     filename: __dirname + '/views/ejsMicro.ejs',
     state: state_abbrev,
+    stateName: stateObj[state_abbrev],
     data: Object.values(stateObj).map((state) => {return {jurisdiction: state}}),
     northeast: northeast,
     south: south,

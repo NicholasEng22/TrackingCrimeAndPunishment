@@ -9,11 +9,20 @@
     <main role="main" class="container">
     <br> <br>
     <br>
-    <h1>Tracking Crime and Punishment in <%= state %></h1>
+    <h1>Tracking Crime and Punishment in <%= stateName %></h1>
     <br>
 
     <input type="hidden" id="selectedMicroState" value="<%= state %>"/>
 
+    <div class = "container">
+
+    <h2>2016 Comparison:</h2>
+    <p>
+      The state of <%= stateName %> has a total population of <span id="state_pop"></span>. In 2016, the total crime (property crime and violent crime) amounted to <span id="state_total_crime"></span>.
+      <%= stateName %> has a crime per capita metric of <span id="state_crime"></span> crimes per 100,000 people.
+      The <%= stateName %> crime per capita is <b><span id="avg_text"></span></b> with the US crime per capita being <span id="us_crime"></span>.
+      The number of crimes committed in <%= stateName %> is <span id="percent_text"></span>% of the US total crime (property and violent crime total).
+    </p>
 
     <div id='mapDiv' style="width:1200px;height:600px;margin:auto;"><!-- Plotly chart will be drawn inside this DIV --></div>
 
@@ -67,6 +76,7 @@
   	<div id='bar' class='graph' style="width:1200px;height:600px;"> </div>
   	<br>
   	<div id='table' class='graph' style="width:1200px;height:600px;"> </div>
+  </div>
   </main>
 
       <%- include ('global/partials/footer');  %>
